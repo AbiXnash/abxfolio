@@ -46,22 +46,16 @@ const Publications = () => {
 								publication.authors.map((author, key) => {
 									return <span key={key}>{author},</span>
 								})
-							},
-							<em> <q>{ publication.title }</q> </em>
-
+							} &nbsp;
+							<em>{ publication.title }, </em>
+							{ publication.publisher }, &nbsp;
+							{ publication.year }. &nbsp;
+							<span>{ publication.status }</span>
 						</td>
 					</tr>
 				})}
 			</tbody>
 		</table>
-		{/* {publications.map((publication, index) => {
-			return <div key={index}>
-				<p>{publication.title}</p>
-				<p>Authors: {publication.authors}</p>
-				<p>Year: {publication.year}</p>
-				<a href={publication.link}>Link</a>
-			</div>
-		})} */}
 	</>
 }
 
