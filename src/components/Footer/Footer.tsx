@@ -1,3 +1,5 @@
+import './Footer.css'
+
 const Footer = () => {
 	return <>
 		<footer>
@@ -5,7 +7,7 @@ const Footer = () => {
 				All copyrights reserved &copy; | Abinash {new Date().getFullYear()}
 			</div>
 			<div>
-				<button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Back to top</button>
+				<button className="top-btn" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>^</button>
 			</div>
 		</footer>
 	</>

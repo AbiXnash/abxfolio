@@ -1,0 +1,14 @@
+.top-btn {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		z-index: 1000;
+		background-color: var(--transparent-btn);
+		color: var(--black-clr);
+		border: none;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+		transition: background-color 0.3s;
+}
