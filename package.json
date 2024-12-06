@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "predeploy": "vite build",
-    "deploy": "main -d dist",
+    "deploy": "gh-pages -d dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
