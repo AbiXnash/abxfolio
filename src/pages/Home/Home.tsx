@@ -6,7 +6,7 @@ const Home = () => {
 			Hello World!
 		</h2>
 		<p>
-			Welcome to afhgfhgfjhfbxfolio, <span> I'm Abinash </span>
+			Welcome to abxfolio, <span> I'm Abinash </span>
 		</p>
 		<p>
 			[ Name: Abinash Selvarasu, ]
