@@ -6,6 +6,7 @@ import Contact from './pages/Contact/Contact'
 import Home from './pages/Home/Home'
 import Projects from './pages/Projects/Projects'
 import Publications from './pages/Publications/Publications'
+import './App.css'
 
 const App = () => {
   return <>
