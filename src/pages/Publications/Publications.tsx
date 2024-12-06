@@ -8,7 +8,7 @@ const Publications = () => {
 		year: string;
 		publisher: string;
 		status: ["Published" | "Accepted" | "Submitted" | "In Preparation"];
-    link: string;
+    link: string | null;
 	}[] = [
 			{
 				id: 1,
@@ -23,14 +23,25 @@ const Publications = () => {
 			},
 			{
 				id: 2,
-				title: "HATT-MLPNN: A Hybrid Approach for Cyber-Attack Detection in Industrial Control Systems Using MLPNN and Attention Mechanisms",
+				title: "HGCNN-LSTM: A Data-Driven Approach for Cyber Attack Detection in Cyber-Physical Systems",
 				first_author: "Abinash S",
-				authors: ["Abinash S", "Saravanan S", "Saravanan S"],
-				corresponding_author: "Abinash S",
-				year: "2021",
-				publisher: "IEEE",
-				status: ["Published"],
-				link: "https://example.com"
+				authors: ["Srivatvan N", "Hemachandran S K"],
+				corresponding_author: "Priyanga S",
+				year: "2024",
+				publisher: "2024",
+				status: ["Accepted"],
+				link: null
+			},
+			{
+				id: 3,
+				title: "HyperCoar-DAM: A Robust Intrusion Detection System for Enhancing IIoT Networks Protection",
+				first_author: "Priyanga S",
+				authors: ["Abinash S", "Srivatvan N", "Hemachandran S K", "Kanan Krithivasan"],
+				corresponding_author: "Shankar Sriram V S",
+				year: "2024",
+				publisher: "International Journal of Advances in Engineering and Applied Mathematics",
+				status: ["Accepted"],
+				link: null
 			}
 	]
 	return <>
@@ -41,16 +52,17 @@ const Publications = () => {
 					return <tr key={index}>
 						<td>[<em>{publication.id}</em>]</td>
 						<td>
-							{ publication.first_author },
+							{ publication.first_author.includes("Abinash") ? <strong>{publication.first_author}</strong> : publication.first_author },&nbsp;
 							{
 								publication.authors.map((author, key) => {
-									return <span key={key}>{author},</span>
+									return <span key={key}>{author.includes("Abinash") ? <strong>{author}</strong> : author}, </span>
 								})
-							} &nbsp;
+							}
 							<em>{ publication.title }, </em>
 							{ publication.publisher }, &nbsp;
 							{ publication.year }. &nbsp;
 							<span>{ publication.status }</span>
+							{ publication.link && <a href={publication.link} target="_blank" rel="noopener noreferrer"> [Link] </a> }
 						</td>
 					</tr>
 				})}
