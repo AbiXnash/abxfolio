@@ -110,57 +110,62 @@ const Header = () => {
 
 	return (
 		<header className="header">
-			<nav className="navbar">
-				<ul className="navGroup">
-					<li className="logo">
-						<h2
-							onMouseEnter={handleMouseEnter}
-							onMouseLeave={handleMouseLeave}
-							className="logo-text"
-						>
-							<a className="link" href="#home">
-								{displayText.split('').map((char, index) => (
-									<span key={index} className="char">
-										{char}
-									</span>
-								))}
-							</a>
-						</h2>
-					</li>
-					<li className="nav">
-						<a className="link" href="#home">Home</a>
-					</li>
-					<li>
-						<a className="link" href="#about">About</a>
-					</li>
-					<li>
-						<a className="link" href="#publications">Publications</a>
-					</li>
-					<li>
-						<a className="link" href="#projects">Projects</a>
-					</li>
-					<li>
-						<a className="link" href="#achievements">Achievements</a>
-					</li>
-					<li>
-						<a className="link" href="#contact">Contact</a>
-					</li>
-					<li>
-					<ul>
+			<ul className="navGroup">
+				<li className="logo">
+					<h2
+						onMouseEnter={handleMouseEnter}
+						onMouseLeave={handleMouseLeave}
+						className="logo-text"
+					>
+						<a className="link" href="#home">
+							{displayText.split('').map((char, index) => (
+								<span key={index} className="char">
+									{char}
+								</span>
+							))}
+						</a>
+					</h2>
+				</li>
+				<li className="nav">
+					<a className="link" href="#home">Home</a>
+				</li>
+				<li>
+					<a className="link" href="#about">About</a>
+				</li>
+				<li className="dropdown">
+					<a className="link dropdown-toggle" href="#more" onClick={(e) => e.preventDefault()}>
+						Resume
+						<img src='https://img.icons8.com/?size=100&id=PnaGTCLxvR58&format=png&color=000000' ></img>
+					</a>
+					<ul className="dropdown-menu">
 						<li>
-								<a className="social-link" href="https://github.com/abxshah">
-									<img src='https://img.icons8.com/?size=100&id=efFfwotdkiU5&format=png&color=000000' ></img>
-								</a>
-							</li>
-							<li>
-								<a className="social-link" href="://github.com/abxshah">
-									<img src='https://img.icons8.com/?size=100&id=MR3dZdlA53te&000000'></img>
-								</a>
+							<a className="link" href="#publications">Publications</a>
+						</li>
+						<li>
+							<a className="link" href="#projects">Projects</a>
+						</li>
+						<li>
+							<a className="link" href="#achievements">Achievements</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a className="link" href="#contact">Contact</a>
+				</li>
+				<li>
+				<ul>
+					<li>
+							<a className="social-link" href="https://github.com/abxshah">
+								<img src='https://img.icons8.com/?size=100&id=efFfwotdkiU5&format=png&color=000000' ></img>
+							</a>
+						</li>
+						<li>								<a className="social-link" href="://github.com/abxshah">
+								<img src='https://img.icons8.com/?size=100&id=MR3dZdlA53te&000000'></img>
+							</a>
 						</li>
 					</ul>
 					</li>
-				</ul>
-			</nav>
+			</ul>
 		</header>
 	);
 };
