@@ -19,16 +19,16 @@
 	--light-grey-font-clr: #ccc;
 	--grey-bg-clr: #f0f0f0;
 
-	--green-circle-clr: #12b84c;
-	--blue-circle-clr: #127bb8;
+	--green-circle-clr: #0a8836;
+	--blue-circle-clr: #05598a;
 	--red-circle-clr: #d82a2a;
 	--grey-circle-clr: #dcdcdc7b;
 
 	--transparent-btn: rgba(0, 0, 0, 0.1);
 	--border-clr: rgb(0, 0, 0);
 
-	--span-green-clr: #12bd5483;
-	--span-blue-clr: #2a97bec8;
+	--span-green-clr: #05983dc1;
+	--span-blue-clr: #03739cc8;
 	--span-red-clr: #c42e2e;
 	--span-grey-clr: #f9f9f96e;
 }
@@ -49,7 +49,7 @@ a {
 }
 
 a:hover {
-	text-decoration: underline;
+	color: #2d4dff;
 }
 
 .green, .blue, .grey, .red {

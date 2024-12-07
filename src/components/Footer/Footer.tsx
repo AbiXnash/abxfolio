@@ -18,8 +18,10 @@ const Footer = () => {
 		return () => window.removeEventListener('scroll', toggleVisibility);
 	}, []);
 
-	return (
+	return <>
+		<hr />
 		<footer>
+
 			<div>
 				All copyrights reserved &copy; | Abinash {new Date().getFullYear()}
 			</div>
@@ -31,7 +33,7 @@ const Footer = () => {
 				)}
 			</div>
 		</footer>
-	);
+	</>
 };
 
 export default Footer;
