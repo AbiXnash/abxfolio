@@ -69,50 +69,24 @@ const SidebarLink = styled(LinkS)`
 	}
 `
 
-// const SidebarBtnWrap = styled.div`
-// 	display: flex;
-// 	justify-content: center;
-// `
-
-// const SidebarBtn = styled(LinkR)`
-// 	border-radius: 50px;
-// 	background: #01bf71;
-// 	white-space: nowrap;
-// 	padding: 16px 64px;
-// 	color: #010606;
-// 	font-size: 1rem;
-// 	outline: none;
-// 	border: none;
-// 	cursor: pointer;
-// 	transition: all 0.2s ease-in-out;
-// 	text-decoration: none;
-
-// 	&:hover {
-// 		transition: all 0.2s ease-in-out;
-// 		background: #fff;
-// 		color: #010606;
-// 	}
-// `
-
-
 interface SidebarProps {
-  isOpen: boolean;
+  IsOpen: boolean;
   toggle: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
+const Sidebar: React.FC<SidebarProps> = ({ IsOpen, toggle }) => {
 	return <>
-		<SidebarContainer isOpen={isOpen} onClick={toggle} >
+		<SidebarContainer isOpen={IsOpen} onClick={toggle} >
 			<Icon onClick={toggle}>
 				<CloseIcon />
 			</Icon>
 			<SidebarWrapper>
 				<SidebarMenu>
-					<SidebarLink to="about" onClick={toggle}>About</SidebarLink>
-					<SidebarLink to="projects" onClick={toggle}>Projects</SidebarLink>
-					<SidebarLink to="publications" onClick={toggle}>Publications</SidebarLink>
-					<SidebarLink to="achievements" onClick={toggle}>Achievements</SidebarLink>
-					<SidebarLink to="contact" onClick={toggle}>Contact</SidebarLink>
+					<SidebarLink to="#about" onClick={toggle}>About</SidebarLink>
+					<SidebarLink to="#projects" onClick={toggle}>Projects</SidebarLink>
+					<SidebarLink to="#publications" onClick={toggle}>Publications</SidebarLink>
+					<SidebarLink to="#achievements" onClick={toggle}>Achievements</SidebarLink>
+					<SidebarLink to="#contact" onClick={toggle}>Contact</SidebarLink>
 				</SidebarMenu>
 				{/* <SidebarBtnWrap>
 					<SidebarBtn to="/">GitHub</SidebarBtn>

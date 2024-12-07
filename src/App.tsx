@@ -10,14 +10,14 @@ import Navbar from './components/Header/Navbar/Navbar'
 import Sidebar from './components/Header/Sidebar/Sidebar'
 import { useState } from 'react'
 const App = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [IsOpen, setIsOpen] = useState(false)
 
   const toggle = () => {
-    setIsOpen(!isOpen)
+    setIsOpen(!IsOpen)
   }
   return <>
     <Navbar toggle={toggle} />
-    <Sidebar isOpen={isOpen} toggle={toggle} />
+    <Sidebar isOpen={IsOpen} toggle={toggle} />
     <Home />
     <About />
     <Publications />

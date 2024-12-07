@@ -2,17 +2,17 @@ import './Home.css'
 import profile from '../../assets/profile.png'
 
 const Home = () => {
-	return <section>
+	return <section id="#home">
 		<div className='container'>
 			<div className='profile-view'>
 				<img src={profile} alt="Abinash Selvarasu" />
 			</div>
 			<div className='introduction'>
-				<h2>
+				<p className='hello-world'>
 					Hello World!
-				</h2>
+				</p>
 				<p>
-					Welcome to abxfolio, <span> I'm Abinash </span>
+					Welcome to abxfolio, <span className='name'> I'm Abinash</span><span className='caret'>|</span>
 				</p>
 				<p>
 					[ Name: Abinash Selvarasu, ]
