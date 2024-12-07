@@ -16,6 +16,8 @@
 	--light-font-clr: #fff;
 	--transparent-btn: rgba(0, 0, 0, 0.1);
 	--border-clr: rgb(0, 0, 0);
+
+	--span-green-clr: #12bd54;
 }
 
 body {
@@ -35,4 +37,8 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+span .green {
+	color: var(--span-green-clr);
 }
