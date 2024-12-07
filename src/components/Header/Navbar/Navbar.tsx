@@ -1,7 +1,127 @@
-import './Header.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
+import { Link as LinkR } from 'react-router-dom'
+import { Link as LinkS } from 'react-scroll'
+import styled from 'styled-components'
+import { FaBars } from 'react-icons/fa'
 
-const Header = () => {
+const Nav = styled.nav`
+	background: #000;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+
+	@media screen and (max-width: 960px) {
+		transition: 0.8s all ease;
+	}
+`;
+
+const NavContainer = styled.div`
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	z-index: 1;
+	width: 100%;
+	padding: 0 24px;
+	max-width: 1100px;
+`;
+
+const NavLogo = styled(LinkR)`
+	color: #fff;
+	justify-self: flex-start;
+	cursor: pointer;
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	text-decoration: none;
+	font-weight: bold;
+`;
+
+const MobileIcon = styled.div`
+	display: none;
+
+	@media screen and (max-width: 960px) {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(-100%, 60%);
+		font-size: 1.8rem;
+		cursor: pointer;
+		color: #fff;
+	}
+`
+
+const NavMenu = styled.ul`
+	display: flex;
+	align-items: center;
+	list-style: none;
+	text-align: center;
+	margin-right: -22px;
+
+	@media screen and (max-width: 960px) {
+		display: none;
+	}
+`;
+
+const NavItem = styled.li`
+	height: 80px;
+`;
+
+const NavLinks = styled(LinkS)`
+	color: #fff;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	padding: 0 1rem;
+	height: 100%;
+	cursor: pointer;
+
+	&.active {
+		border-bottom: 3px solid #01bf71;
+	}
+`
+
+const NavBtn = styled.nav`
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+
+	@media screen and (max-width: 960px) {
+		margin-right: 50px;
+	}
+`
+
+const NavBtnLink = styled(LinkR)`
+	border-radius: 50px;
+	background: #01bf71;
+	white-space: nowrap;
+	padding: 10px 22px;
+	color: #010606;
+	font-size: 16px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	text-decoration: none;
+
+	&:hover {
+		transition: all 0.2s ease-in-out;
+		background: #fff;
+		color: #010606;
+	}
+`
+
+interface NavbarProps {
+  toggle: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
 	const originalText = "ABX.";
 	const [displayText, setDisplayText] = useState<string>(originalText);
 	const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -9,9 +129,6 @@ const Header = () => {
 	const [speed, setSpeed] = useState<number>(80);
 	const [symbols, setSymbols] = useState<string[]>(['@', '#', '%', '&', '$', '*', '!', '?', '(', ')', '=', '+', 'A', 'B', 'X', '.']);
 	const [hoverTimeout, setHoverTimeout] = useState<number | undefined>(undefined);
-	const [menuOpen, setMenuOpen] = useState<boolean>(false); // Hamburger menu state
-	const [resumeOpen, setResumeOpen] = useState<boolean>(false); // Dropdown menu state for Resume
-
 	// Function to generate random symbols
 	const getRandomSymbol = (): string => symbols[Math.floor(Math.random() * symbols.length)];
 
@@ -96,68 +213,53 @@ const Header = () => {
 		};
 	});
 
-	return (
-		<header className="header">
-			<div className="header-container">
-				<h2
+	return <>
+		<Nav>
+			<NavContainer>
+				<NavLogo to='/'>
+				<p
 					onMouseEnter={handleMouseEnter}
 					onMouseLeave={handleMouseLeave}
 					className="logo-text"
 				>
-					<a className="link" href="#home">
+					<p className="link">
 						{displayText.split('').map((char, index) => (
 							<span key={index} className="char">
 								{char}
 							</span>
 						))}
-					</a>
-				</h2>
-				<nav className={`navGroup ${menuOpen ? 'open' : ''}`}>
-					<a className="link" href="#home">Home</a>
-					<a className="link" href="#about">About</a>
-					<div
-						className="dropdown"
-						onMouseEnter={() => setResumeOpen(true)}
-						onMouseLeave={() => setResumeOpen(false)}
-					>
-						<a className="link dropdown-toggle" href="#resume">
-							Resume
-							<img src='https://img.icons8.com/?size=100&id=PnaGTCLxvR58&format=png&color=000000' alt="Dropdown" />
-						</a>
-						{resumeOpen && (
-							<ul className="dropdown-menu">
-								<li>
-									<a className="link" href="#publications">Publications</a>
-								</li>
-								<li>
-									<a className="link" href="#projects">Projects</a>
-								</li>
-								<li>
-									<a className="link" href="#achievements">Achievements</a>
-								</li>
-							</ul>
-						)}
-					</div>
-					<a className="link" href="#contact">Contact</a>
-				</nav>
-				<div className="hamburger-social">
-					<div className="social-links">
-						<a className="social-link" href="https://github.com/abxshah">
-							<img src='https://img.icons8.com/?size=100&id=efFfwotdkiU5&format=png&color=000000' alt="GitHub" />
-						</a>
-						<a className="social-link" href="https://linkedin.com">
-							<img src='https://img.icons8.com/?size=100&id=MR3dZdlA53te&format=png&color=000000' alt="LinkedIn" />
-						</a>
-					</div>
-					<button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-						<span className="line"></span>
-						<span className="line"></span>
-						<span className="line"></span>
-					</button>
-				</div>
-			</div>
-		</header>
-	);
-};
+					</p>
+				</p>
+				</NavLogo>
+				<MobileIcon onClick={toggle}>
+					<FaBars />
+				</MobileIcon>
+				<NavMenu>
+					<NavItem>
+						<NavLinks to='home'>Home</NavLinks>
+					</NavItem>
+					<NavItem>
+						<NavLinks to='about'>About</NavLinks>
+					</NavItem>
+					<NavItem>
+						<NavLinks to='publications'>Publications</NavLinks>
+					</NavItem>
+					<NavItem>
+						<NavLinks to='projects'>Projects</NavLinks>
+					</NavItem>
+					<NavItem>
+						<NavLinks to='achievements'>Achievements</NavLinks>
+					</NavItem>
+					<NavItem>
+						<NavLinks to='contact'>Contact</NavLinks>
+					</NavItem>
+				</NavMenu>
+				<NavBtn className='github'>
+					<NavBtnLink to='/'> Github </NavBtnLink>
+				</NavBtn>
+			</NavContainer>
+		</Nav>
+	</>
+}
 
-export default Header;
+export default Navbar
