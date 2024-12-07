@@ -2,18 +2,22 @@ import { useState, useEffect } from 'react'
 import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
 import styled from 'styled-components'
-import { FaBars } from 'react-icons/fa'
+import { FaBars, FaGithub } from 'react-icons/fa'
 
 const Nav = styled.nav`
-	background: #000;
+	background: var(--header-bg);
+	border: 1px solid var(--border-clr);
+	border-radius: 30px;
 	height: 80px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 1rem;
 	position: sticky;
-	top: 0;
+	top: 5px;
 	z-index: 999;
+	backdrop-filter: blur(10px);
+	background-color: var(--header-white-bg);
 
 	@media screen and (max-width: 960px) {
 		transition: 0.8s all ease;
@@ -26,12 +30,12 @@ const NavContainer = styled.div`
 	height: 80px;
 	z-index: 1;
 	width: 100%;
-	padding: 0 24px;
+	padding: 10px 24px;
 	max-width: 1100px;
 `;
 
 const NavLogo = styled(LinkR)`
-	color: #fff;
+	color: var(--font-clr);
 	justify-self: flex-start;
 	cursor: pointer;
 	font-size: 1.5rem;
@@ -53,7 +57,7 @@ const MobileIcon = styled.div`
 		transform: translate(-100%, 60%);
 		font-size: 1.8rem;
 		cursor: pointer;
-		color: #fff;
+		color: var(--dark-font-clr);
 	}
 `
 
@@ -74,7 +78,7 @@ const NavItem = styled.li`
 `;
 
 const NavLinks = styled(LinkS)`
-	color: #fff;
+	color: var(--dark-font-clr);
 	display: flex;
 	align-items: center;
 	text-decoration: none;
@@ -82,8 +86,11 @@ const NavLinks = styled(LinkS)`
 	height: 100%;
 	cursor: pointer;
 
+
+
 	&.active {
-		border-bottom: 3px solid #01bf71;
+		border-bottom: 3px solid var(--primary-clr);
+		color: var(--primary-clr);
 	}
 `
 
@@ -99,10 +106,10 @@ const NavBtn = styled.nav`
 
 const NavBtnLink = styled(LinkR)`
 	border-radius: 50px;
-	background: #01bf71;
+	background: var(--dark-btn-clr);
 	white-space: nowrap;
 	padding: 10px 22px;
-	color: #010606;
+	color: var(--light-font-clr);
 	font-size: 16px;
 	outline: none;
 	border: none;
@@ -112,8 +119,8 @@ const NavBtnLink = styled(LinkR)`
 
 	&:hover {
 		transition: all 0.2s ease-in-out;
-		background: #fff;
-		color: #010606;
+		background: var(--light-btn-clr);
+		color: var(--dark-font-clr);
 	}
 `
 
@@ -254,8 +261,11 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
 						<NavLinks to='contact'>Contact</NavLinks>
 					</NavItem>
 				</NavMenu>
-				<NavBtn className='github'>
-					<NavBtnLink to='/'> Github </NavBtnLink>
+				<NavBtn>
+				<NavBtnLink to='https://github.com/AbiXnash/' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+					<FaGithub style={{ marginRight: '8px', marginTop: '0.1px' }} />
+					Github
+				</NavBtnLink>
 				</NavBtn>
 			</NavContainer>
 		</Nav>
