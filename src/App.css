@@ -52,107 +52,62 @@ a:hover {
 	text-decoration: underline;
 }
 
-.green{
+.green, .blue, .grey, .red {
 	font-family: 'Poppins', sans-serif;
-	font-weight: 600;
-	color: var(--light-font-clr);
+	font-weight: 500;
 	display: inline-flex;
 	align-items: center;
-	background-color: var(--span-green-clr);
-	padding: 4px 12px;
-	border-radius: 20px;
-	border: 2px solid var(--green-circle-clr);
 	font-size: 13px;
 	position: relative;
+	border-radius: 20px;
+	padding: 4px 12px;
+}
+
+.green{
+	color: var(--light-font-clr);
+	background-color: var(--span-green-clr);
+	border: 2px solid var(--green-circle-clr);
 }
 
 .blue {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 600;
 	color: var(--light-font-clr);
-	display: inline-flex;
-	align-items: center;
 	background-color: var(--span-blue-clr);
-	padding: 4px 12px;
-	border-radius: 20px;
 	border: 2px solid var(--blue-circle-clr);
-	font-size: 13px;
-	position: relative;
 }
 
 .grey{
-	font-family: 'Poppins', sans-serif;
-	font-weight: 600;
 	color: var(--dark-grey-font-clr);
-	display: inline-flex;
-	align-items: center;
 	background-color: var(--span-green-clr);
-	padding: 4px 12px;
-	border-radius: 20px;
 	border: 2px solid var(--grey-circle-clr);
-	font-size: 13px;
-	position: relative;
 }
 
 .red {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 600;
-	color: var(--dark-grey-font-clr);
-	display: inline-flex;
-	align-items: center;
 	background-color: var(--span-green-clr);
-	padding: 4px 12px;
-	border-radius: 20px;
+	color: var(--dark-grey-font-clr);
 	border: 2px solid var(--red-circle-clr);
-	font-size: 13px;
-	position: relative;
+
 }
 
-/* .green {
-	font-weight: 600;
-	color: var(--light-font-clr);
-  display: inline-flex;
-  align-items: center;
-  background-color: var(--span-green-clr);
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid var(--dark-btn-clr);
-  font-size: 13px;
-  position: relative;
-} */
+.green::before, .blue::before, .grey::before, .red::before {
+	content: '';
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin-right: 8px;
+}
 
 .green::before  {
-  content: '';
-  width: 12px;
-  height: 12px;
   background-color: var(--green-circle-clr);
-  border-radius: 50%;
-  margin-right: 8px;
 }
 
 .blue::before {
-  content: '';
-  width: 12px;
-  height: 12px;
   background-color: var(--blue-circle-clr);
-  border-radius: 50%;
-  margin-right: 8px;
 }
 
 .grey::before {
-  content: '';
-  width: 12px;
-  height: 12px;
   background-color: var(--grey-circle-clr);
-  border-radius: 50%;
-  margin-right: 8px;
 }
 
 .red::before {
-  content: '';
-  width: 12px;
-  height: 12px;
   background-color: var(--red-circle-clr);
-  border-radius: 50%;
-  margin-right: 8px;
 }
