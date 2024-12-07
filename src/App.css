@@ -53,7 +53,7 @@ a:hover {
 }
 
 .green, .blue, .grey, .red {
-	font-family: 'Poppins', sans-serif;
+	box-shadow: inset 0 0 0 2px var(--dark-font-clr);
 	font-weight: 500;
 	display: inline-flex;
 	align-items: center;
@@ -66,25 +66,21 @@ a:hover {
 .green{
 	color: var(--light-font-clr);
 	background-color: var(--span-green-clr);
-	border: 2px solid var(--green-circle-clr);
 }
 
 .blue {
 	color: var(--light-font-clr);
 	background-color: var(--span-blue-clr);
-	border: 2px solid var(--blue-circle-clr);
 }
 
 .grey{
 	color: var(--dark-grey-font-clr);
 	background-color: var(--span-green-clr);
-	border: 2px solid var(--grey-circle-clr);
 }
 
 .red {
 	background-color: var(--span-green-clr);
 	color: var(--dark-grey-font-clr);
-	border: 2px solid var(--red-circle-clr);
 
 }
 
@@ -110,4 +106,11 @@ a:hover {
 
 .red::before {
   background-color: var(--red-circle-clr);
+}
+
+@media screen and (min-width: 1100px) {
+	body {
+		font-size: 1.1rem;
+	}
+
 }

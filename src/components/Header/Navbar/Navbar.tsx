@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import { FaBars, FaGithub } from 'react-icons/fa'
 
 const Nav = styled.nav`
+	// width: 80%;
+	// margin: 0 auto;
 	background: var(--header-bg);
 	border: 1px solid var(--border-clr);
 	border-radius: 30px;
@@ -19,7 +21,7 @@ const Nav = styled.nav`
 	backdrop-filter: blur(10px);
 	background-color: var(--header-white-bg);
 
-	@media screen and (max-width: 960px) {
+	@media screen and (max-width: 1100px) {
 		transition: 0.8s all ease;
 	}
 `;
@@ -49,7 +51,7 @@ const NavLogo = styled(LinkR)`
 const MobileIcon = styled.div`
 	display: none;
 
-	@media screen and (max-width: 960px) {
+	@media screen and (max-width: 1100px) {
 		display: block;
 		position: absolute;
 		top: 0;
@@ -68,12 +70,14 @@ const NavMenu = styled.ul`
 	text-align: center;
 	margin-right: -22px;
 
-	@media screen and (max-width: 960px) {
+	@media screen and (max-width: 1100px) {
 		display: none;
 	}
 `;
 
 const NavItem = styled.li`
+	font-size: 1.2rem;
+
 	height: 80px;
 `;
 
@@ -99,7 +103,7 @@ const NavBtn = styled.nav`
 	align-items: center;
 	font-weight: bold;
 
-	@media screen and (max-width: 960px) {
+	@media screen and (max-width: 1100px) {
 		margin-right: 50px;
 	}
 `
