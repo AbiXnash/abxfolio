@@ -17,7 +17,7 @@ const App = () => {
   }
   return <>
     <Navbar toggle={toggle} />
-    <Sidebar isOpen={IsOpen} toggle={toggle} />
+    <Sidebar IsOpen={IsOpen} toggle={toggle} />
     <Home />
     <About />
     <Publications />
