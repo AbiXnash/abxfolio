@@ -2,8 +2,8 @@ import './Home.css'
 import profile from '../../assets/profile.png'
 
 const Home = () => {
-	return <section id="#home">
-		<div className='container'>
+	return <section id="#home" className='home'>
+		<div className='container column'>
 			<div className='profile-view'>
 				<img src={profile} alt="Abinash Selvarasu" />
 			</div>
@@ -12,7 +12,7 @@ const Home = () => {
 					Hello World!
 				</p>
 				<p className='welcome-text'>
-					Welcome to abxfolio, &nbsp;<span className='name'> I'm Abinash<span className='caret'></span></span>
+					Welcome to abxfolio,&nbsp;<span className='name'> I'm Abinash<span className='caret'></span></span>
 				</p>
 				<p>
 					[ Name: Abinash Selvarasu, ]

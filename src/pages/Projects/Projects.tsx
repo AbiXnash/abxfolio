@@ -59,28 +59,30 @@ const Projects = () => {
 			}
 	];
 
-	return <>
-		<h1>Projects</h1>
-		<div>
-			{projects.map((project, index) => {
-				return <div key={index}>
-					<h2>{project.name}</h2>
-					{ project.contributors && <p>Contributors: {project.contributors.join(", ")}</p> }
-					<p>Domain: {project.domain.join(", ")}</p>
-					{ project.link && <p>Link: {project.link.map((link, key) => {
-						return <a key={key} href={link} target="_blank" rel="noreferrer">{link}</a>
-					})}</p> }
-					<p>{project.description}</p>
-					<p>Status: {project.status.join(", ")}</p>
-					<ul>
-						{project.keynote.map((keynote, key) => {
-							return <li key={key}>{keynote}</li>
-						})}
-					</ul>
-				</div>
-			})}
+	return <section className="section" id='#section'>
+		<div className="container row">
+			<h1>Projects</h1>
+			<div>
+				{projects.map((project, index) => {
+					return <div key={index}>
+						<h2>{project.name}</h2>
+						{ project.contributors && <p>Contributors: {project.contributors.join(", ")}</p> }
+						<p>Domain: {project.domain.join(", ")}</p>
+						{ project.link && <p>Link: {project.link.map((link, key) => {
+							return <a key={key} href={link} target="_blank" rel="noreferrer">{link}</a>
+						})}</p> }
+						<p>{project.description}</p>
+						<p>Status: {project.status.join(", ")}</p>
+						<ul>
+							{project.keynote.map((keynote, key) => {
+								return <li key={key}>{keynote}</li>
+							})}
+						</ul>
+					</div>
+				})}
+			</div>
 		</div>
-	</>
+	</section>
 }
 
 export default Projects

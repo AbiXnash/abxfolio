@@ -57,7 +57,8 @@ const Publications = () => {
 		}
 	};
 
-	return <>
+	return <section className="publications" id='#publications'>
+		<div className="container row">
 		<h1>Publications</h1>
 		<table>
 			<tbody>
@@ -81,7 +82,8 @@ const Publications = () => {
 				})}
 			</tbody>
 		</table>
-	</>
+		</div>
+	</section>
 }
 
 export default Publications;

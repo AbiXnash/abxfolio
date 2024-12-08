@@ -1,5 +1,6 @@
 const Achievements = () => {
-	return <>
+	return <section className='achievements' id='#achievements'>
+		<div className="container row">
 		<h1>Achievements</h1>
 		<ul>
 			<li>Presented our Reasearch paper at the <strong>4th International Conference on Computing, Analytics, and Networks (ICAN 2024)</strong>, jointly organized by Chitkara University</li>
@@ -8,7 +9,9 @@ const Achievements = () => {
 			<li>Author of the book titled <q>Fleeting Fables: A Symphony of Flash Fiction</q></li>
 			<li>Organized a workshop on MERN Stack, <q>Indepth Look into MERN Stack</q> under the banner of SASTRA Free &amp; Open Source Software (SFOSS)</li>
 		</ul>
-	</>
+		</div>
+
+	</section>
 }
 
 export default Achievements

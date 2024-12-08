@@ -5,9 +5,9 @@ const Contact = () => {
 	const github: string = 'https://github.com/AbiXnash/'
 	const linkedin: string = 'https://in.linkedin.com/in/abinash-selvarasu'
 	const instagram: string = 'https://www.instagram.com/_abixnash_/'
-	return <>
-		<h1>Contact</h1>
-		<div>
+	return <section className="contact" id='#contact'>
+		<div className="container row">
+			<h1>Contact</h1>
 			<div>
 				<p>Name: {name}</p>
 				<p>Phone: {phone}</p>
@@ -19,7 +19,7 @@ const Contact = () => {
 				<p>Instagram: <a href={instagram} target="_blank" rel="noopener noreferrer">{instagram}</a></p>
 			</div>
 		</div>
-	</>
+	</section>
 }
 
 export default Contact
