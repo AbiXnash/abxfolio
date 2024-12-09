@@ -85,7 +85,8 @@ h3 {
 	font-size: 1.5rem;
 }
 
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: 960px) {
 	body {
 		font-size: 1.2rem;
 	}

@@ -8,9 +8,9 @@ const Home = () => {
 				<img src={profile} alt="Abinash Selvarasu" />
 			</div>
 			<div className='introduction'>
-				<p className='hello-world'>
+				<h1 className='hello-world'>
 					Hello World!
-				</p>
+				</h1>
 				<p className='welcome-text'>
 					Welcome to abxfolio,&nbsp;<span className='name'> I'm Abinash<span className='caret'></span></span>
 				</p>

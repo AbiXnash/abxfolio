@@ -35,7 +35,6 @@
 
 .hello-world {
 	margin: 0;
-	font-size: 2.5rem;
 	font-weight: 700;
 }
 
@@ -89,21 +88,17 @@ span.skill3 {
 	background-color: var(--span-red-clr);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
 	.profile-view {
 		width: 100%;
 	}
 
 	.profile-view img{
+		margin: 20px 0 20px 0px;
 		width: 50%;
 	}
 	.introduction {
 		width: 100%;
-	}
-
-	.home {
-		width: 100%;
-		margin: auto;
 	}
 
 }

@@ -5,8 +5,6 @@ import styled from 'styled-components'
 import { FaBars, FaGithub } from 'react-icons/fa'
 
 const Nav = styled.nav`
-	// width: 80%;
-	// margin: 0 auto;
 	background: var(--header-bg);
 	border: 1px solid var(--border-clr);
 	border-radius: 30px;
@@ -245,13 +243,13 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
 					onMouseLeave={handleMouseLeave}
 					className="logo-text"
 				>
-					<p className="link">
+					<span className="link">
 						{displayText.split('').map((char, index) => (
 							<span key={index} className="char">
 								{char}
 							</span>
 						))}
-					</p>
+					</span>
 				</p>
 				</NavLogo>
 				<MobileIcon onClick={toggle}>
