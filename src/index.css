@@ -73,8 +73,225 @@ a:hover {
 	color: var(--dark-grey-font-clr);
 }
 
-@media screen and (min-width: 1100px) {
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
 	body {
-		font-size: 1.1rem;
+		font-size: 1.2rem;
+	}
+
+	section {
+		margin: 0 5% 5% 5%;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
+
+	p {
+		font-size: 1.2rem;
+	}
+
+	a {
+		font-size: 1.2rem;
+	}
+
+	ul {
+		font-size: 1.2rem;
+	}
+
+	li {
+		font-size: 1.2rem;
+	}
+
+	span {
+		font-size: 1.2rem;
+	}
+
+	footer {
+		font-size: 1.2rem;
+	}
+
+	nav {
+		font-size: 1.2rem;
+	}
+
+	nav a {
+		font-size: 1.2rem;
+	}
+
+	nav a:hover {
+		font-size: 1.2rem;
+	}
+
+	nav a:active {
+		font-size: 1.2rem;
+	}
+
+	nav a:visited {
+		font-size: 1.2rem;
+	}
+
+	nav a:focus {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		font-size: 1rem;
+	}
+
+	section {
+		margin: 0 5% 5% 5%;
+	}
+
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	p {
+		font-size: 1rem;
+	}
+
+	a {
+		font-size: 1rem;
+	}
+
+	ul {
+		font-size: 1rem;
+	}
+
+	li {
+		font-size: 1rem;
+	}
+
+	span {
+		font-size: 1rem;
+	}
+
+	footer {
+		font-size: 1rem;
+	}
+
+	nav {
+		font-size: 1rem;
+	}
+
+	nav a {
+		font-size: 1rem;
+	}
+
+	nav a:hover {
+		font-size: 1rem;
+	}
+
+	nav a:active {
+		font-size: 1rem;
+	}
+
+	nav a:visited {
+		font-size: 1rem;
+	}
+
+	nav a:focus {
+		font-size: 1rem;
+	}
+
+}
+
+@media  screen and (max-width: 480px) {
+	body {
+		font-size: 0.8rem;
+	}
+
+	section {
+		margin: 0 5% 5% 5%;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.2rem;
+	}
+
+	p {
+		font-size: 0.8rem;
+	}
+
+	a {
+		font-size: 0.8rem;
+	}
+
+	ul {
+		font-size: 0.8rem;
+	}
+
+	li {
+		font-size: 0.8rem;
+	}
+
+	span {
+		font-size: 0.8rem;
+	}
+
+	footer {
+		font-size: 0.8rem;
+	}
+
+	nav {
+		font-size: 0.8rem;
+	}
+
+	nav a {
+		font-size: 0.8rem;
+	}
+
+	nav a:hover {
+		font-size: 0.8rem;
+	}
+
+	nav a:active {
+		font-size: 0.8rem;
+	}
+
+	nav a:visited {
+		font-size: 0.8rem;
+	}
+
+	nav a:focus {
+		font-size: 0.8rem;
 	}
 }

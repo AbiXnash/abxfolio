@@ -95,15 +95,20 @@ span.skill3 {
 	}
 
 	.profile-view img{
-		width: 70%;
+		width: 50%;
 	}
 	.introduction {
 		width: 100%;
 	}
 
+	.home {
+		width: 100%;
+		margin: auto;
+	}
+
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 860px) {
 	.welcome-text {
 		flex-direction: column;
 	}
