@@ -155,5 +155,10 @@ a:hover {
 	body {
 		font-size: 1.1rem;
 	}
+}
 
+@media screen and (max-width: 768px) {
+	.container {
+		flex-direction: column;
+	}
 }
