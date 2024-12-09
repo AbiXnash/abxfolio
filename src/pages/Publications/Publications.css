@@ -1,0 +1,58 @@
+.title {
+	font-size: 2em;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-align: center;
+	animation: fadeIn 1s ease-in-out;
+}
+
+.publications-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+}
+
+.publication-row {
+	display: flex;
+	align-items: flex-start;
+	border-bottom: 1px solid #ddd;
+	transition: background-color 0.3s ease;
+}
+
+.publication-row:hover {
+	background-color: #f9f9f9;
+}
+
+.publication-id {
+	width: 50px;
+	padding-top: 10px;
+	text-align: center;
+	font-style: italic;
+}
+
+@media (min-width: 768px) {
+	.publication-row {
+		transition: background-color 0.3s ease;
+	}
+}
+
+.publication-details {
+	padding: 10px;
+}
+
+.publication-details strong {
+	font-weight: bold;
+}
+
+.publication-details em {
+	font-style: italic;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

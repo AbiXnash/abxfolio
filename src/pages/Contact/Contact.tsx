@@ -5,7 +5,7 @@ const Contact = () => {
 	const github: string = 'https://github.com/AbiXnash/'
 	const linkedin: string = 'https://in.linkedin.com/in/abinash-selvarasu'
 	const instagram: string = 'https://www.instagram.com/_abixnash_/'
-	return <section className="contact" id='#contact'>
+	return <section className="contact" id='contact'>
 		<div className="container row">
 			<h1>Contact</h1>
 			<div>

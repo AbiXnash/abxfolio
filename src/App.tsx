@@ -9,15 +9,17 @@ import './App.css'
 import Navbar from './components/Header/Navbar/Navbar'
 import Sidebar from './components/Header/Sidebar/Sidebar'
 import { useState } from 'react'
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
 const App = () => {
-  const [IsOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => {
-    setIsOpen(!IsOpen)
+    setIsOpen(!isOpen)
   }
   return <>
     <Navbar toggle={toggle} />
-    <Sidebar IsOpen={IsOpen} toggle={toggle} />
+    <Sidebar isOpen={isOpen} toggle={toggle} />
     <Home />
     <About />
     <Publications />
@@ -25,6 +27,20 @@ const App = () => {
     <Achievements />
     <Contact />
     <Footer />
+
+    {/* <Router>
+      <Navbar toggle={toggle} />
+      <Sidebar isopen={isopen} toggle={toggle} />
+      <Routes>
+        <Route path="/abxfolio" element={<Home/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/publications" element={<Publications/>} />
+        <Route path="/projects" element={<Projects/>} />
+        <Route path="/achievements" element={<Achievements/>} />
+        <Route path="/contact" element={<Contact/>} />
+      </Routes>
+      <Footer />
+    </Router> */}
   </>
 }
 

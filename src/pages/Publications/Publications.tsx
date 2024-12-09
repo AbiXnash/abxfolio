@@ -1,4 +1,5 @@
 import arrow from "../../assets/arrow.svg";
+import './Publications.css'
 
 const Publications = () => {
 	const publications: {
@@ -30,7 +31,7 @@ const Publications = () => {
 			authors: ["Srivatvan N", "Hemachandran S K"],
 			corresponding_author: "Priyanga S",
 			year: "2024",
-			publisher: "2024",
+			publisher: "Springer Journals",
 			status: ["Accepted"],
 			link: null
 		},
@@ -59,31 +60,54 @@ const Publications = () => {
 		}
 	};
 
-	return <section className="publications" id='#publications'>
+	return <section className="publications" id='publications'>
 		<div className="container row">
-		<h1>Publications</h1>
-		<table>
-			<tbody>
-				{publications.map((publication, index) => {
-					return <tr key={index}>
-						<td>[<em>{publication.id}</em>]</td>
-						<td>
-							{publication.first_author.includes("Abinash") ? <strong>{publication.first_author}</strong> : publication.first_author},&nbsp;
-							{
-								publication.authors.map((author, key) => {
-									return <span key={key}>{author.includes("Abinash") ? <strong>{author}</strong> : author}, </span>
-								})
-							}
-							<em>{publication.title}, </em>
-							{publication.publisher}, &nbsp;
-							{publication.year}. &nbsp;
-							<span className={getStatusClass(publication.status[0])}>{publication.status}</span>
-							{publication.link && <a className='arrow-link' href={publication.link} target="_blank" rel="noopener noreferrer"> <img src={arrow} ></img> View Paper </a>}
-						</td>
-					</tr>
-				})}
-			</tbody>
-		</table>
+			<h1 className="title">Publications</h1>
+			<table className="publications-table">
+				<tbody>
+					{publications.map((publication, index) => {
+						return (
+							<tr key={index} className="publication-row">
+								<td className="publication-id">[<em>{publication.id}</em>]</td>
+								<td className="publication-details">
+									{publication.first_author.includes("Abinash") ? (
+										<strong>{publication.first_author}</strong>
+									) : (
+										publication.first_author
+									)}
+									,&nbsp;
+									{publication.authors.map((author, key) => (
+										<span key={key}>
+											{author.includes("Abinash") ? (
+												<strong>{author}</strong>
+											) : (
+												author
+											)}
+											,{" "}
+										</span>
+									))}
+									<em>{publication.title}, </em>
+									{publication.publisher}, &nbsp;
+									{publication.year}. &nbsp;
+									<span className={`status ${getStatusClass(publication.status[0])}`}>
+										{publication.status}
+									</span>
+									{publication.link && (
+										<a
+											className="arrow-link"
+											href={publication.link}
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											<img src={arrow} alt="arrow" className="arrow-icon" /> View Paper
+										</a>
+									)}
+								</td>
+							</tr>
+						);
+					})}
+				</tbody>
+			</table>
 		</div>
 	</section>
 }

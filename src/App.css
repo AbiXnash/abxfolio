@@ -36,21 +36,6 @@
 	--span-grey-clr: #f9f9f96e;
 }
 
-@keyframes appear {
-	from {
-		opacity: 0;
-		scale: 0.5;
-	}
-	to {
-		opacity: 1;
-		scale: 1;
-	}
-}
-
-.about {
-	animation: appear 5s linear;
-}
-
 body {
 	font-family: 'Space Mono', 'Poppins', sans-serif;
 	box-sizing: border-box;

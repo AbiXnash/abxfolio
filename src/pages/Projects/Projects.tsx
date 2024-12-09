@@ -61,17 +61,17 @@ const Projects = () => {
 			}
 	];
 
-	return <section className="section" id='#section'>
+	return <section className="projects" id='projects'>
 		<div className="container row">
 			<h1>Projects</h1>
 			<div>
-				{projects.map((project, index) => {
-					return <div key={index}>
+				{projects.map((project) => {
+					return <div key={project.id}>
 						<h2>{project.name}</h2>
 						{ project.contributors && <p>Contributors: {project.contributors.join(", ")}</p> }
 						<p>Domain: {project.domain.join(", ")}</p>
 						{ project.link && <p className="link-grp">Link: {project.link.map((link, key) => {
-							return <><a className='arrow-link' key={key} href={link.url} target="_blank" rel="noreferrer"><img src={arrow} ></img>{link.text}</a></>
+							return <span key={key}><a className='arrow-link' href={link.url} target="_blank" rel="noreferrer"><img src={arrow} ></img>{link.text}</a></span>
 						})}</p> }
 						<p>{project.description}</p>
 						<p>Status: {project.status.join(", ")}</p>

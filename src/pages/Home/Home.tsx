@@ -2,7 +2,7 @@ import './Home.css'
 import profile from '../../assets/profile.png'
 
 const Home = () => {
-	return <section id="#home" className='home'>
+	return <section id="home" className='home'>
 		<div className='container column'>
 			<div className='profile-view'>
 				<img src={profile} alt="Abinash Selvarasu" />
@@ -15,10 +15,7 @@ const Home = () => {
 					Welcome to abxfolio,&nbsp;<span className='name'> I'm Abinash<span className='caret'></span></span>
 				</p>
 				<p>
-					[ Name: Abinash Selvarasu, ]
-				</p>
-				<p>
-					[ Description: Welcome to my abxfolio, folks! I'm a Full Stack Developer, Deep Learning Enthusiast
+					[ Description: I'm a Full Stack Developer, Deep Learning Enthusiast
 					and I'm here to help you with your next project. ]
 				</p>
 				<p>

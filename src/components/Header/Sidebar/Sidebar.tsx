@@ -3,11 +3,7 @@ import { FaTimes } from "react-icons/fa"
 // import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
 
-interface SidebarContainerProps {
-  isOpen: boolean;
-}
-
-const SidebarContainer = styled.div<SidebarContainerProps>`
+const SidebarContainer = styled.div<{ $isOpen: boolean }>`
 	position: fixed;
 	z-index: 999;
 	width: 100%;
@@ -18,8 +14,8 @@ const SidebarContainer = styled.div<SidebarContainerProps>`
 	top: 0;
 	left: 0;
 	transition: 0.3s ease-in-out;
-	opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-	top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+	opacity: ${({ $isOpen }) => ($isOpen ? "100%" : "0")};
+	top: ${({ $isOpen }) => ($isOpen ? "0" : "-100%")};
 `
 
 
@@ -70,23 +66,23 @@ const SidebarLink = styled(LinkS)`
 `
 
 interface SidebarProps {
-  IsOpen: boolean;
+  isOpen: boolean;
   toggle: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ IsOpen, toggle }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
 	return <>
-		<SidebarContainer isOpen={IsOpen} onClick={toggle} >
+		<SidebarContainer $isOpen={isOpen} onClick={toggle} >
 			<Icon onClick={toggle}>
 				<CloseIcon />
 			</Icon>
 			<SidebarWrapper>
 				<SidebarMenu>
-					<SidebarLink to="#about" onClick={toggle}>About</SidebarLink>
-					<SidebarLink to="#projects" onClick={toggle}>Projects</SidebarLink>
-					<SidebarLink to="#publications" onClick={toggle}>Publications</SidebarLink>
-					<SidebarLink to="#achievements" onClick={toggle}>Achievements</SidebarLink>
-					<SidebarLink to="#contact" onClick={toggle}>Contact</SidebarLink>
+					<SidebarLink to="about" onClick={toggle}>About</SidebarLink>
+					<SidebarLink to="projects" onClick={toggle}>Projects</SidebarLink>
+					<SidebarLink to="publications" onClick={toggle}>Publications</SidebarLink>
+					<SidebarLink to="achievements" onClick={toggle}>Achievements</SidebarLink>
+					<SidebarLink to="contact" onClick={toggle}>Contact</SidebarLink>
 				</SidebarMenu>
 				{/* <SidebarBtnWrap>
 					<SidebarBtn to="/">GitHub</SidebarBtn>
