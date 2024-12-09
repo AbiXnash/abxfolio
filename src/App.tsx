@@ -8,7 +8,7 @@ import Publications from './pages/Publications/Publications'
 import './App.css'
 import Navbar from './components/Header/Navbar/Navbar'
 import Sidebar from './components/Header/Sidebar/Sidebar'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 const App = () => {
@@ -17,7 +17,20 @@ const App = () => {
   const toggle = () => {
     setIsOpen(!isOpen)
   }
-  return <>
+
+  const preventCopy = (e: ClipboardEvent) => {
+    e.preventDefault();
+  };
+
+  useEffect(() => {
+    document.addEventListener('copy', preventCopy);
+
+    return () => {
+      document.removeEventListener('copy', preventCopy);
+    };
+  }, []);
+
+  return <div className='no-select'>
     <Navbar toggle={toggle} />
     <Sidebar isOpen={isOpen} toggle={toggle} />
     <Home />
@@ -41,7 +54,7 @@ const App = () => {
       </Routes>
       <Footer />
     </Router> */}
-  </>
+  </div>
 }
 
 export default App
