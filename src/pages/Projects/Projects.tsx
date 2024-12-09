@@ -1,3 +1,5 @@
+import arrow from '../../assets/arrow.svg'
+
 const Projects = () => {
 
 	const projects: {
@@ -5,7 +7,7 @@ const Projects = () => {
 		name: string,
 		contributors: string[] | null,
 		domain: string[],
-		link: string[] | null,
+		link: { text: string, url: string }[] | null,
 		description: string,
 		status: ["Completed" | "Ongoing" | "Upcoming"],
 		keynote: string[]
@@ -15,7 +17,7 @@ const Projects = () => {
 				name: "Intrusion Detection System",
 				contributors: ["Srivatsan N", "Hemachandran S K"],
 				domain: ["Cyber Security", "Deep Learning"],
-				link: ["https://github.com/AbiXnash/An-Intrusion-Detection-System-using-Deep-Learning-models-on-UNSW_NB15-dataset"],
+				link: [{ text: "GitHub Repository", url: "https://github.com/AbiXnash/An-Intrusion-Detection-System-using-Deep-Learning-models-on-UNSW_NB15-dataset" }],
 				description: "Developed a hybrid CNN-LSTM model achieving an accuracy of 97% on UNSW_NB15 dataset, reducing the false positive rate by 25% and boosting response time by 30%.",
 				status: ["Completed"],
 				keynote: [
@@ -29,7 +31,7 @@ const Projects = () => {
 				name: "WiFi Trolly Bot using ESP32",
 				contributors: ["Srivatvan N", "Hari Prasad S"],
 				domain: ["Internet of Things", "Robotics"],
-				link: ["https://github.com/AbiXnash/WiFi-Trolley-Bot-using-ESP32"],
+				link: [{ text: "GitHub Repository", url: "https://github.com/AbiXnash/WiFi-Trolley-Bot-using-ESP32" }],
 				description: "Engineered a WiFi-controlled trolley bot using ESP32 to enhance automation in warehouses and factories by 40% and reduce downtime by 20%.",
 				status: ["Completed"],
 				keynote: [
@@ -44,9 +46,9 @@ const Projects = () => {
 				contributors: null,
 				domain: ["Web Development"],
 				link: [
-					"https://github.com/AbiXnash/conference-site",
-					"https://github.com/AbiXnash/Theta-24",
-					"https://github.com/AbiXnash/theta2k23"
+					{ text: "Conference Site", url: "https://github.com/AbiXnash/conference-site" },
+					{ text: "Theta 24", url: "https://github.com/AbiXnash/Theta-24" },
+					{ text: "Theta 2k23", url: "https://github.com/AbiXnash/theta2k23" }
 				],
 				description: "Created web appilcation for SASTRA University's International Conference and National Level Event, enabling seamless event management and participant registration.",
 				status: ["Completed"],
@@ -68,8 +70,8 @@ const Projects = () => {
 						<h2>{project.name}</h2>
 						{ project.contributors && <p>Contributors: {project.contributors.join(", ")}</p> }
 						<p>Domain: {project.domain.join(", ")}</p>
-						{ project.link && <p>Link: {project.link.map((link, key) => {
-							return <a key={key} href={link} target="_blank" rel="noreferrer">{link}</a>
+						{ project.link && <p className="link-grp">Link: {project.link.map((link, key) => {
+							return <><a className='arrow-link' key={key} href={link.url} target="_blank" rel="noreferrer"><img src={arrow} ></img>{link.text}</a></>
 						})}</p> }
 						<p>{project.description}</p>
 						<p>Status: {project.status.join(", ")}</p>

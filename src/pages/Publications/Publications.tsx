@@ -1,3 +1,5 @@
+import arrow from "../../assets/arrow.svg";
+
 const Publications = () => {
 	const publications: {
 		id: number;
@@ -76,7 +78,7 @@ const Publications = () => {
 							{publication.publisher}, &nbsp;
 							{publication.year}. &nbsp;
 							<span className={getStatusClass(publication.status[0])}>{publication.status}</span>
-							{publication.link && <a href={publication.link} target="_blank" rel="noopener noreferrer"> [Link] </a>}
+							{publication.link && <a className='arrow-link' href={publication.link} target="_blank" rel="noopener noreferrer"> <img src={arrow} ></img> View Paper </a>}
 						</td>
 					</tr>
 				})}
