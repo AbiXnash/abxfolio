@@ -146,8 +146,8 @@ Please change the parent <Route path="${C}"> to <Route path="${C==="/"?"*":`${C}
 	top: 0;
 	left: 0;
 	transition: 0.3s ease-in-out;
-	opacity: ${({isOpen:i})=>i?"100%":"0"};
-	top: ${({isOpen:i})=>i?"0":"-100%"};
+	opacity: ${({isopen:i})=>i?"100%":"0"};
+	top: ${({isopen:i})=>i?"0":"-100%"};
 `,Ky=Je(Ay)`
 	color: #fff;
 `,Yy=Je.div`
@@ -184,4 +184,4 @@ Please change the parent <Route path="${C}"> to <Route path="${C==="/"?"*":`${C}
 		color: #01bf71;
 		transition: 0.2s ease-in-out;
 	}
-`,Xy=({isOpen:i,toggle:l})=>j.jsx(j.Fragment,{children:j.jsxs(qy,{isOpen:i,onClick:l,children:[j.jsx(Yy,{onClick:l,children:j.jsx(Ky,{})}),j.jsx(by,{children:j.jsxs(Gy,{children:[j.jsx(ai,{to:"about",onClick:l,children:"About"}),j.jsx(ai,{to:"projects",onClick:l,children:"Projects"}),j.jsx(ai,{to:"publications",onClick:l,children:"Publications"}),j.jsx(ai,{to:"achievements",onClick:l,children:"Achievements"}),j.jsx(ai,{to:"contact",onClick:l,children:"Contact"})]})})]})}),Jy=()=>{const[i,l]=F.useState(!1),a=()=>{l(!i)};return j.jsxs(j.Fragment,{children:[j.jsx(Qy,{toggle:a}),j.jsx(Xy,{isOpen:i,toggle:a}),j.jsx(pg,{}),j.jsx(sg,{}),j.jsx(mg,{}),j.jsx(hg,{}),j.jsx(cg,{}),j.jsx(fg,{}),j.jsx(ug,{})]})};Am.createRoot(document.getElementById("root")).render(j.jsx(F.StrictMode,{children:j.jsx(Xv,{children:j.jsx(Jy,{})})}));
+`,Xy=({isopen:i,toggle:l})=>j.jsx(j.Fragment,{children:j.jsxs(qy,{isopen:i,onClick:l,children:[j.jsx(Yy,{onClick:l,children:j.jsx(Ky,{})}),j.jsx(by,{children:j.jsxs(Gy,{children:[j.jsx(ai,{to:"about",onClick:l,children:"About"}),j.jsx(ai,{to:"projects",onClick:l,children:"Projects"}),j.jsx(ai,{to:"publications",onClick:l,children:"Publications"}),j.jsx(ai,{to:"achievements",onClick:l,children:"Achievements"}),j.jsx(ai,{to:"contact",onClick:l,children:"Contact"})]})})]})}),Jy=()=>{const[i,l]=F.useState(!1),a=()=>{l(!i)};return j.jsxs(j.Fragment,{children:[j.jsx(Qy,{toggle:a}),j.jsx(Xy,{isopen:i,toggle:a}),j.jsx(pg,{}),j.jsx(sg,{}),j.jsx(mg,{}),j.jsx(hg,{}),j.jsx(cg,{}),j.jsx(fg,{}),j.jsx(ug,{})]})};Am.createRoot(document.getElementById("root")).render(j.jsx(F.StrictMode,{children:j.jsx(Xv,{children:j.jsx(Jy,{})})}));
