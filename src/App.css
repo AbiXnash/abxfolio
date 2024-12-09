@@ -45,10 +45,11 @@
 	flex-direction: row;
 }
 
+
 .container {
 	display: flex;
-  width: 90%;
-  max-width: 1100px;
+	width: 90%;
+	max-width: 1100px;
 }
 
 
