@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react'
-import { Link as LinkR } from 'react-router-dom'
-import { Link as LinkS } from 'react-scroll'
-import styled from 'styled-components'
-import { FaBars, FaGithub } from 'react-icons/fa'
+import { useState, useEffect } from 'react';
+import { Link as LinkR } from 'react-router-dom';
+import { Link as LinkS } from 'react-scroll';
+import styled from 'styled-components';
+import { FaBars, FaGithub } from 'react-icons/fa';
 
 const Nav = styled.nav`
 	background: var(--header-bg);
@@ -59,7 +59,7 @@ const MobileIcon = styled.div`
 		cursor: pointer;
 		color: var(--dark-font-clr);
 	}
-`
+`;
 
 const NavMenu = styled.ul`
 	display: flex;
@@ -87,13 +87,11 @@ const NavLinks = styled(LinkS)`
 	height: 100%;
 	cursor: pointer;
 
-
-
 	&.active {
 		border-bottom: 3px solid var(--primary-clr);
 		color: var(--primary-clr);
 	}
-`
+`;
 
 const NavBtn = styled.nav`
 	display: flex;
@@ -103,7 +101,7 @@ const NavBtn = styled.nav`
 	@media screen and (max-width: 1100px) {
 		margin-right: 50px;
 	}
-`
+`;
 
 const NavBtnLink = styled(LinkR)`
 	display: flex;
@@ -136,10 +134,10 @@ const NavBtnLink = styled(LinkR)`
 			display: none;
 		}
 	}
-`
+`;
 
 interface NavbarProps {
-  toggle: () => void;
+	toggle: () => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
@@ -234,58 +232,44 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
 		};
 	});
 
-	return <>
+	return (
 		<Nav>
 			<NavContainer>
-				<NavLogo to='/'>
-				<p
-					onMouseEnter={handleMouseEnter}
-					onMouseLeave={handleMouseLeave}
-					className="logo-text"
-				>
-					<span className="link">
-						{displayText.split('').map((char, index) => (
-							<span key={index} className="char">
-								{char}
-							</span>
-						))}
-					</span>
-				</p>
+				<NavLogo to='home' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+					{displayText}
 				</NavLogo>
 				<MobileIcon onClick={toggle}>
 					<FaBars />
 				</MobileIcon>
 				<NavMenu>
 					<NavItem>
-						<NavLinks to='home'>Home</NavLinks>
+						<NavLinks to='home' smooth={true} duration={500} offset={-80}>Home</NavLinks>
 					</NavItem>
 					<NavItem>
-						<NavLinks to='about'>About</NavLinks>
+						<NavLinks to='about' smooth={true} duration={500} offset={-80}>About</NavLinks>
 					</NavItem>
 					<NavItem>
-						<NavLinks to='publications'>Publications</NavLinks>
+						<NavLinks to='publications' smooth={true} duration={500} offset={-80}>Publications</NavLinks>
 					</NavItem>
 					<NavItem>
-						<NavLinks to='projects'>Projects</NavLinks>
+						<NavLinks to='projects' smooth={true} duration={500} offset={-80}>Projects</NavLinks>
 					</NavItem>
 					<NavItem>
-						<NavLinks to='achievements'>Achievements</NavLinks>
+						<NavLinks to='achievements' smooth={true} duration={500} offset={-80}>Achievements</NavLinks>
 					</NavItem>
 					<NavItem>
-						<NavLinks to='contact'>Contact</NavLinks>
+						<NavLinks to='contact' smooth={true} duration={500} offset={-80}>Contact</NavLinks>
 					</NavItem>
 				</NavMenu>
 				<NavBtn>
-				<NavBtnLink to='https://github.com/AbiXnash/'>
-					<FaGithub/>
-						<span className="github-text">Github</span>
+					<NavBtnLink to='https://github.com/AbiXnash' target='_blank' rel='noreferrer'>
+						<FaGithub />
+						<span className='github-text'>GitHub</span>
 					</NavBtnLink>
-
-
 				</NavBtn>
 			</NavContainer>
 		</Nav>
-	</>
-}
+	);
+};
 
-export default Navbar
+export default Navbar;

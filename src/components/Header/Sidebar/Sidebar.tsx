@@ -18,7 +18,6 @@ const SidebarContainer = styled.div<{ $isOpen: boolean }>`
 	top: ${({ $isOpen }) => ($isOpen ? "0" : "-100%")};
 `
 
-
 const CloseIcon = styled(FaTimes)`
 	color: #fff;
 `
@@ -66,8 +65,8 @@ const SidebarLink = styled(LinkS)`
 `
 
 interface SidebarProps {
-  isOpen: boolean;
-  toggle: () => void;
+	isOpen: boolean;
+	toggle: () => void;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
@@ -78,11 +77,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
 			</Icon>
 			<SidebarWrapper>
 				<SidebarMenu>
-					<SidebarLink to="about" onClick={toggle}>About</SidebarLink>
-					<SidebarLink to="projects" onClick={toggle}>Projects</SidebarLink>
-					<SidebarLink to="publications" onClick={toggle}>Publications</SidebarLink>
-					<SidebarLink to="achievements" onClick={toggle}>Achievements</SidebarLink>
-					<SidebarLink to="contact" onClick={toggle}>Contact</SidebarLink>
+					<SidebarLink to="about" onClick={toggle} offset={-80}>About</SidebarLink>
+					<SidebarLink to="projects" onClick={toggle} offset={-80}>Projects</SidebarLink>
+					<SidebarLink to="publications" onClick={toggle} offset={-80}>Publications</SidebarLink>
+					<SidebarLink to="achievements" onClick={toggle} offset={-80}>Achievements</SidebarLink>
+					<SidebarLink to="contact" onClick={toggle} offset={-80}>Contact</SidebarLink>
 				</SidebarMenu>
 				{/* <SidebarBtnWrap>
 					<SidebarBtn to="/">GitHub</SidebarBtn>
