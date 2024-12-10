@@ -1,5 +1,5 @@
 import arrow from "../../assets/arrow.svg";
-import './Publications.css'
+import './Publications.scss'
 
 const Publications = () => {
 	const publications: {
