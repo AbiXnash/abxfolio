@@ -58,12 +58,44 @@ const SidebarLink = styled(LinkS)`
 	transition: 0.2s ease-in-out;
 	color: #fff;
 	cursor: pointer;
+	position: relative;
 
 	&:hover {
-		color: #01bf71;
+		background-color: white;
+		color: black; /* Change color on hover */
+		transform: scale(1.1); /* Scale up the link */
 		transition: 0.2s ease-in-out;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
+		text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add glow effect */
+
+		/* Blur the other borders */
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 100%;
+			background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+			filter: blur(5px); /* Apply blur */
+			transition: filter 0.2s ease-in-out;
+			z-index: -1; /* Behind the text */
+		}
 	}
-`
+
+	&:hover::before {
+		top: -3px;
+		height: 2px;
+		background: rgba(255, 255, 255, 0.8);
+		filter: blur(0);
+	}
+
+	&:hover::after {
+		bottom: -3px;
+		height: 2px;
+		background: rgba(255, 255, 255, 0.8);
+		filter: blur(0);
+	}
+`;
 
 interface SidebarProps {
 	isOpen: boolean;
@@ -78,7 +110,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
 			</Icon>
 			<SidebarWrapper>
 				<SidebarMenu>
-					<SidebarLink to="home" onClick={toggle} offset={-80} smooth={true} duration={500}>Home</SidebarLink>
+					<SidebarLink to="home" onClick={toggle} offset={-80} smooth={true} duration={500} activeClass="active">Home</SidebarLink>
 					<SidebarLink to="about" onClick={toggle} offset={-80} smooth={true} duration={500}>About</SidebarLink>
 					<SidebarLink to="projects" onClick={toggle} offset={-80} smooth={true} duration={500}>Projects</SidebarLink>
 					<SidebarLink to="publications" onClick={toggle} offset={-80} smooth={true} duration={500}>Publications</SidebarLink>
