@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './Footer.css';
+import './Footer.scss';
 import triangle from '../../assets/triangle.svg';
 
 const Footer = () => {

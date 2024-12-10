@@ -1,7 +1,7 @@
 footer {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
-		/* display: flex; */
+	/* display: flex; */
 	background-color: var(--black-clr);
 	color: var(--white-clr);
 	padding: 20px 0;
@@ -22,12 +22,12 @@ footer {
 	height: 50px;
 	cursor: pointer;
 	transition: background-color 0.6s;
-}
 
-.top-btn:hover {
-	opacity: 0.9;
-}
+	&:hover {
+		opacity: 0.9;
+	}
 
-.top-btn .triangle {
-	width: auto;
+	.triangle {
+		width: auto;
+	}
 }
