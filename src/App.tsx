@@ -10,6 +10,7 @@ import './App.scss';
 import Navbar from './components/Header/Navbar/Navbar';
 import Sidebar from './components/Header/Sidebar/Sidebar';
 import './Loader.scss'; // Import CSS for the loader
+import { BrowserRouter } from "react-router-dom";
 
 const Loader = () => {
   return <div className="loader-container">
@@ -53,7 +54,7 @@ const App = () => {
         loadComponents();
     }, []); // Runs once when the component mounts
 
-    return (
+    return <BrowserRouter>
         <div className='no-select'>
             {loading ? (
                 <Loader />
@@ -71,7 +72,7 @@ const App = () => {
                 </>
             )}
         </div>
-    );
+        </BrowserRouter>
 };
 
 export default App;
