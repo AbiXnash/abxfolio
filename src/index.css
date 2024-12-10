@@ -24,6 +24,11 @@
 	--blue-circle-clr: #05598a;
 	--red-circle-clr: #d82a2a;
 	--grey-circle-clr: #dcdcdc7b;
+	--yellow-circle-clr: #f7ff14;
+	--purple-circle-clr: #6a0dad;
+	--orange-circle-clr: #ff7f00;
+	--pink-circle-clr: #ff007f;
+	--cyan-circle-clr: #00ffff;
 
 	--grey-link: #5f5f5f;
   --dark-grey-link: #505050;
@@ -114,7 +119,7 @@ a:hover {
 }
 
 h1 {
-	margin: 50px 0;
+	/* margin: 50px 0; */
 	font-size: 5rem;
 }
 
