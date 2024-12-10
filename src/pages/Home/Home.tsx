@@ -1,4 +1,4 @@
-import './Home.css'
+import './Home.scss'
 import profile from '../../assets/profile.png'
 
 const Home = () => {
