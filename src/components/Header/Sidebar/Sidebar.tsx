@@ -8,7 +8,8 @@ const SidebarContainer = styled.div<{ $isOpen: boolean }>`
 	z-index: 999;
 	width: 100%;
 	height: 100%;
-	background: #0d0d0d;
+	background: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(10px);
 	display: grid;
 	align-items: center;
 	top: 0;
@@ -77,11 +78,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
 			</Icon>
 			<SidebarWrapper>
 				<SidebarMenu>
-					<SidebarLink to="about" onClick={toggle} offset={-80}>About</SidebarLink>
-					<SidebarLink to="projects" onClick={toggle} offset={-80}>Projects</SidebarLink>
-					<SidebarLink to="publications" onClick={toggle} offset={-80}>Publications</SidebarLink>
-					<SidebarLink to="achievements" onClick={toggle} offset={-80}>Achievements</SidebarLink>
-					<SidebarLink to="contact" onClick={toggle} offset={-80}>Contact</SidebarLink>
+					<SidebarLink to="home" onClick={toggle} offset={-80} smooth={true} duration={500}>Home</SidebarLink>
+					<SidebarLink to="about" onClick={toggle} offset={-80} smooth={true} duration={500}>About</SidebarLink>
+					<SidebarLink to="projects" onClick={toggle} offset={-80} smooth={true} duration={500}>Projects</SidebarLink>
+					<SidebarLink to="publications" onClick={toggle} offset={-80} smooth={true} duration={500}>Publications</SidebarLink>
+					<SidebarLink to="achievements" onClick={toggle} offset={-80} smooth={true} duration={500}>Achievements</SidebarLink>
+					<SidebarLink to="contact" onClick={toggle} offset={-80} smooth={true} duration={500}>Contact</SidebarLink>
 				</SidebarMenu>
 				{/* <SidebarBtnWrap>
 					<SidebarBtn to="/">GitHub</SidebarBtn>
