@@ -16,10 +16,14 @@
 	align-items: flex-start;
 	border-bottom: 1px solid #ddd;
 	transition: background-color 0.3s ease;
-}
 
-.publication-row:hover {
-	background-color: #f9f9f9;
+	&:hover {
+		background-color: #f9f9f9;
+	}
+
+	@media (min-width: 768px) {
+		transition: background-color 0.3s ease;
+	}
 }
 
 .publication-id {
@@ -29,22 +33,16 @@
 	font-style: italic;
 }
 
-@media (min-width: 768px) {
-	.publication-row {
-		transition: background-color 0.3s ease;
-	}
-}
-
 .publication-details {
 	padding: 10px;
-}
 
-.publication-details strong {
-	font-weight: bold;
-}
+	strong {
+		font-weight: bold;
+	}
 
-.publication-details em {
-	font-style: italic;
+	em {
+		font-style: italic;
+	}
 }
 
 @keyframes fadeIn {
