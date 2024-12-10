@@ -31,7 +31,7 @@
 	--cyan-circle-clr: #00ffff;
 
 	--grey-link: #5f5f5f;
-  --dark-grey-link: #505050;
+	--dark-grey-link: #505050;
 
 	--transparent-btn: rgba(0, 0, 0, 0.1);
 	--border-clr: rgb(0, 0, 0);
@@ -58,12 +58,11 @@ h1 {
 	font-weight: 700;
 	text-transform: uppercase;
 	z-index: -1;
-	/* position: absolute; */
 	opacity: 0.3;
+	font-size: 5rem;
 }
 
 section {
-	/* font-size: max(calc(0.5vw - 1em), 1rem) ; */
 	background-color: rgba(255, 255, 255, 0.1);
 	border: 1px solid var(--light-grey-font-clr);
 	border-radius: 50px;
@@ -76,9 +75,8 @@ section {
 	margin: 0 0 5% 5%;
 	height: auto;
 	width: 90%;
-	animation: glassEffect 1.5s ease-in-out infinite;
+	animation: glassEffect 1.5s ease-in-out infinite, fadeIn 1s ease-in-out;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -91,7 +89,6 @@ section {
 		opacity: 1;
 	}
 }
-
 
 @keyframes glassEffect {
 	0% {
@@ -112,15 +109,10 @@ p a {
 a {
 	color: var(--primary-clr);
 	margin-right: 10px;
-}
 
-a:hover {
-	color: var(--dark-grey-font-clr);
-}
-
-h1 {
-	/* margin: 50px 0; */
-	font-size: 5rem;
+	&:hover {
+		color: var(--dark-grey-font-clr);
+	}
 }
 
 h2 {
@@ -131,9 +123,7 @@ h3 {
 	font-size: 1.5rem;
 }
 
-
 @media screen and (max-width: 960px) {
-
 	section {
 		margin: 0 5% 5% 5%;
 	}
@@ -150,50 +140,17 @@ h3 {
 		font-size: 2rem;
 	}
 
-	p {
-		font-size: 1.2rem;
-	}
-
-	a {
-		font-size: 1.2rem;
-	}
-
-	ul {
-		font-size: 1.2rem;
-	}
-
-	li {
-		font-size: 1.2rem;
-	}
-
-	span {
-		font-size: 1.2rem;
-	}
-
-	footer {
-		font-size: 1.2rem;
-	}
-
-	nav {
-		font-size: 1.2rem;
-	}
-
-	nav a {
-		font-size: 1.2rem;
-	}
-
-	nav a:hover {
-		font-size: 1.2rem;
-	}
-
-	nav a:active {
-		font-size: 1.2rem;
-	}
-
-	nav a:visited {
-		font-size: 1.2rem;
-	}
-
+	p,
+	a,
+	ul,
+	li,
+	span,
+	footer,
+	nav,
+	nav a,
+	nav a:hover,
+	nav a:active,
+	nav a:visited,
 	nav a:focus {
 		font-size: 1.2rem;
 	}
@@ -220,57 +177,23 @@ h3 {
 		font-size: 1.5rem;
 	}
 
-	p {
-		font-size: 1rem;
-	}
-
-	a {
-		font-size: 1rem;
-	}
-
-	ul {
-		font-size: 1rem;
-	}
-
-	li {
-		font-size: 1rem;
-	}
-
-	span {
-		font-size: 1rem;
-	}
-
-	footer {
-		font-size: 1rem;
-	}
-
-	nav {
-		font-size: 1rem;
-	}
-
-	nav a {
-		font-size: 1rem;
-	}
-
-	nav a:hover {
-		font-size: 1rem;
-	}
-
-	nav a:active {
-		font-size: 1rem;
-	}
-
-	nav a:visited {
-		font-size: 1rem;
-	}
-
+	p,
+	a,
+	ul,
+	li,
+	span,
+	footer,
+	nav,
+	nav a,
+	nav a:hover,
+	nav a:active,
+	nav a:visited,
 	nav a:focus {
 		font-size: 1rem;
 	}
-
 }
 
-@media  screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
 	body {
 		font-size: 0.8rem;
 	}
@@ -291,50 +214,17 @@ h3 {
 		font-size: 1.2rem;
 	}
 
-	p {
-		font-size: 0.8rem;
-	}
-
-	a {
-		font-size: 0.8rem;
-	}
-
-	ul {
-		font-size: 0.8rem;
-	}
-
-	li {
-		font-size: 0.8rem;
-	}
-
-	span {
-		font-size: 0.8rem;
-	}
-
-	footer {
-		font-size: 0.8rem;
-	}
-
-	nav {
-		font-size: 0.8rem;
-	}
-
-	nav a {
-		font-size: 0.8rem;
-	}
-
-	nav a:hover {
-		font-size: 0.8rem;
-	}
-
-	nav a:active {
-		font-size: 0.8rem;
-	}
-
-	nav a:visited {
-		font-size: 0.8rem;
-	}
-
+	p,
+	a,
+	ul,
+	li,
+	span,
+	footer,
+	nav,
+	nav a,
+	nav a:hover,
+	nav a:active,
+	nav a:visited,
 	nav a:focus {
 		font-size: 0.8rem;
 	}
