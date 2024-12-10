@@ -5,12 +5,10 @@ import Contact from './pages/Contact/Contact'
 import Home from './pages/Home/Home'
 import Projects from './pages/Projects/Projects'
 import Publications from './pages/Publications/Publications'
-import './App.css'
+import './App.scss'
 import Navbar from './components/Header/Navbar/Navbar'
 import Sidebar from './components/Header/Sidebar/Sidebar'
 import { useState, useEffect } from 'react'
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-
 const App = () => {
   const [isOpen, setIsOpen] = useState(false)
 
