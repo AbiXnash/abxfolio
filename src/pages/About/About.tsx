@@ -26,7 +26,7 @@ const About = () => {
 						</div>
 					</div>
 					<div className="part percent-90">
-						<div className="label">Deep Learning</div>
+						<div className="label">AI/ML</div>
 						<div className="bar purple-skill aw">
 								<div className="label">90%</div>
 						</div>

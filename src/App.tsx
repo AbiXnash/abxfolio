@@ -1,58 +1,77 @@
-import Footer from './components/Footer/Footer'
-import About from './pages/About/About'
-import Achievements from './pages/Achievements/Achievements'
-import Contact from './pages/Contact/Contact'
-import Home from './pages/Home/Home'
-import Projects from './pages/Projects/Projects'
-import Publications from './pages/Publications/Publications'
-import './App.scss'
-import Navbar from './components/Header/Navbar/Navbar'
-import Sidebar from './components/Header/Sidebar/Sidebar'
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import Footer from './components/Footer/Footer';
+import About from './pages/About/About';
+import Achievements from './pages/Achievements/Achievements';
+import Contact from './pages/Contact/Contact';
+import Home from './pages/Home/Home';
+import Projects from './pages/Projects/Projects';
+import Publications from './pages/Publications/Publications';
+import './App.scss';
+import Navbar from './components/Header/Navbar/Navbar';
+import Sidebar from './components/Header/Sidebar/Sidebar';
+import './Loader.scss'; // Import CSS for the loader
+
+const Loader = () => {
+  return <div className="loader-container">
+          <div className="loader"></div>
+      </div>
+};
+
+
 const App = () => {
-  const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+    const [loading, setLoading] = useState(true);
 
-  const toggle = () => {
-    setIsOpen(!isOpen)
-  }
-
-  const preventCopy = (e: ClipboardEvent) => {
-    e.preventDefault();
-  };
-
-  useEffect(() => {
-    document.addEventListener('copy', preventCopy);
-
-    return () => {
-      document.removeEventListener('copy', preventCopy);
+    const toggle = () => {
+        setIsOpen(!isOpen);
     };
-  }, []);
 
-  return <div className='no-select'>
-    <Navbar toggle={toggle} />
-    <Sidebar isOpen={isOpen} toggle={toggle} />
-    <Home />
-    <About />
-    <Publications />
-    <Projects />
-    <Achievements />
-    <Contact />
-    <Footer />
+    const preventCopy = (e: ClipboardEvent) => {
+        e.preventDefault();
+    };
 
-    {/* <Router>
-      <Navbar toggle={toggle} />
-      <Sidebar isopen={isopen} toggle={toggle} />
-      <Routes>
-        <Route path="/abxfolio" element={<Home/>} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/publications" element={<Publications/>} />
-        <Route path="/projects" element={<Projects/>} />
-        <Route path="/achievements" element={<Achievements/>} />
-        <Route path="/contact" element={<Contact/>} />
-      </Routes>
-      <Footer />
-    </Router> */}
-  </div>
-}
+    useEffect(() => {
+        document.addEventListener('copy', preventCopy);
 
-export default App
+        return () => {
+            document.removeEventListener('copy', preventCopy);
+        };
+    }, []);
+
+    // This effect simulates data loading or the mounting of child components
+    useEffect(() => {
+        const loadComponents = async () => {
+            // Simulate an async operation, such as data fetching or a timeout
+            await new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(null);
+                }, 1500); // Simulating loading time (1 second)
+            });
+            setLoading(false); // Set loading to false after components are loaded
+        };
+
+        loadComponents();
+    }, []); // Runs once when the component mounts
+
+    return (
+        <div className='no-select'>
+            {loading ? (
+                <Loader />
+            ) : (
+                <>
+                    <Navbar toggle={toggle} />
+                    <Sidebar isOpen={isOpen} toggle={toggle} />
+                    <Home />
+                    <About />
+                    <Publications />
+                    <Projects />
+                    <Achievements />
+                    <Contact />
+                    <Footer />
+                </>
+            )}
+        </div>
+    );
+};
+
+export default App;
