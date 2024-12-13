@@ -77,9 +77,9 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects">
+      <h1 style={{ display: 'block' }}>Projects</h1>
       <div className="container row">
         <div className={`${selectedProject ? "with-modal" : ""}`}>
-          <h1>Projects</h1>
           <div className="projects-container">
             {projects.map((project) => (
               <div className="project" key={project.id}>
