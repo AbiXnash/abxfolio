@@ -5,10 +5,7 @@ import Navbar from './components/Header/Navbar/Navbar';
 import Sidebar from './components/Header/Sidebar/Sidebar';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import Achievements from './pages/Achievements/Achievements';
 import Publications from './pages/Publications/Publications';
-import Projects from './pages/Projects/Projects';
-import Contact from './pages/Contact/Contact';
 import Footer from './components/Footer/Footer';
 
 import './Loader.scss'; // Import CSS for the loader
@@ -67,9 +64,6 @@ const App = () => {
                     <Home />
                     <About />
                     <Publications />
-                    <Projects />
-                    <Achievements />
-                    <Contact />
                     <Footer />
                 </>
             )}
