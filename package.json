@@ -9,6 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.13"
+    "@altano/astro-prettier-response": "^0.0.2",
+    "astro": "^5.7.13",
+    "astro-htmx": "^1.0.6",
+    "htmx.org": "^1.9.12",
+    "prettier": "^3.5.3"
   }
 }
