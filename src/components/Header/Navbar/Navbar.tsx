@@ -307,27 +307,6 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
             >
               Publications
             </NavLinks>
-          </NavItem>
-          <NavItem>
-            <NavLinks to="projects" smooth={true} duration={500} offset={-80}>
-              Projects
-            </NavLinks>
-          </NavItem>
-          <NavItem>
-            <NavLinks
-              to="achievements"
-              smooth={true}
-              duration={500}
-              offset={-80}
-            >
-              Achievements
-            </NavLinks>
-          </NavItem>
-          <NavItem>
-            <NavLinks to="contact" smooth={true} duration={500} offset={-80}>
-              Contact
-            </NavLinks>
-          </NavItem>
         </NavMenu>
         <NavBtn>
           <NavBtnLink
