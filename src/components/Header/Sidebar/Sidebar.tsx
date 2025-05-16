@@ -112,10 +112,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
 				<SidebarMenu>
 					<SidebarLink to="home" onClick={toggle} offset={-80} smooth={true} duration={500} activeClass="active">Home</SidebarLink>
 					<SidebarLink to="about" onClick={toggle} offset={-80} smooth={true} duration={500}>About</SidebarLink>
-					<SidebarLink to="projects" onClick={toggle} offset={-80} smooth={true} duration={500}>Projects</SidebarLink>
+				
 					<SidebarLink to="publications" onClick={toggle} offset={-80} smooth={true} duration={500}>Publications</SidebarLink>
-					<SidebarLink to="achievements" onClick={toggle} offset={-80} smooth={true} duration={500}>Achievements</SidebarLink>
-					<SidebarLink to="contact" onClick={toggle} offset={-80} smooth={true} duration={500}>Contact</SidebarLink>
 				</SidebarMenu>
 				{/* <SidebarBtnWrap>
 					<SidebarBtn to="/">GitHub</SidebarBtn>
