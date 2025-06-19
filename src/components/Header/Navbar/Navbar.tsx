@@ -137,46 +137,16 @@ const NavBtnLink = styled(LinkR)`
 `;
 
 interface NavbarProps {
-  toggle: () => void;
+    toggle: () => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
-  const originalText = "ABX.";
-  const [displayText, setDisplayText] = useState<string>(originalText);
-  const [isHovered, setIsHovered] = useState<boolean>(false);
-  const [shouldReset, setShouldReset] = useState<boolean>(false);
-  const [speed, setSpeed] = useState<number>(80);
-  const [symbols, setSymbols] = useState<string[]>([
-    "@",
-    "#",
-    "%",
-    "&",
-    "$",
-    "*",
-    "!",
-    "?",
-    "(",
-    ")",
-    "=",
-    "+",
-    "A",
-    "B",
-    "X",
-    ".",
-  ]);
-  const [hoverTimeout, setHoverTimeout] = useState<number | undefined>(
-    undefined,
-  );
-  // Function to generate random symbols
-  const getRandomSymbol = (): string =>
-    symbols[Math.floor(Math.random() * symbols.length)];
-
-  const handleMouseEnter = () => {
-    const timeout = window.setTimeout(() => {
-      setIsHovered(true);
-      setShouldReset(false);
-      setSpeed(70);
-      setSymbols([
+    const originalText = "ABX.";
+    const [displayText, setDisplayText] = useState<string>(originalText);
+    const [isHovered, setIsHovered] = useState<boolean>(false);
+    const [shouldReset, setShouldReset] = useState<boolean>(false);
+    const [speed, setSpeed] = useState<number>(80);
+    const [symbols, setSymbols] = useState<string[]>([
         "@",
         "#",
         "%",
@@ -193,134 +163,165 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
         "B",
         "X",
         ".",
-      ]);
-    }, 300);
-    setHoverTimeout(timeout);
-  };
+    ]);
+    const [hoverTimeout, setHoverTimeout] = useState<number | undefined>(
+        undefined,
+    );
+    // Function to generate random symbols
+    const getRandomSymbol = (): string =>
+        symbols[Math.floor(Math.random() * symbols.length)];
 
-  const handleMouseLeave = () => {
-    if (hoverTimeout) {
-      clearTimeout(hoverTimeout);
-      setHoverTimeout(undefined);
-    }
-    setIsHovered(false);
-    setShouldReset(true);
-  };
-
-  useEffect(() => {
-    let interval: number | undefined;
-    let resetTimeout: number | undefined;
-    let speedIncreaseInterval: number | undefined;
-
-    if (isHovered) {
-      interval = window.setInterval(() => {
-        setDisplayText(() => {
-          let randomText = "";
-          for (let i = 0; i < originalText.length; i++) {
-            randomText += shouldReset ? originalText[i] : getRandomSymbol();
-          }
-          return randomText;
-        });
-      }, speed);
-
-      resetTimeout = window.setTimeout(() => {
-        setShouldReset(true);
-        setIsHovered(false);
-      }, 1000);
-
-      speedIncreaseInterval = window.setTimeout(() => {
-        const speedInterval = window.setInterval(() => {
-          setSpeed((prevSpeed) => prevSpeed - 1);
-          setSymbols((prevSymbols) => {
-            const newSymbols = prevSymbols.slice(0, -1);
-            if (
-              ["A", "B", "X", "."].some((char) => !newSymbols.includes(char))
-            ) {
-              return prevSymbols;
-            }
-            return newSymbols;
-          });
-        }, 70);
-        return () => clearInterval(speedInterval);
-      }, 1000);
-
-      window.setTimeout(() => {
-        setDisplayText(originalText);
-        setShouldReset(false);
-        setIsHovered(false);
-      }, 1000);
-    } else if (shouldReset) {
-      const restoreInterval = window.setInterval(() => {
-        setDisplayText((prevText) => {
-          let updatedText = "";
-          for (let i = 0; i < originalText.length; i++) {
-            updatedText +=
-              prevText[i] === originalText[i]
-                ? originalText[i]
-                : getRandomSymbol();
-          }
-          if (updatedText === originalText) {
-            clearInterval(restoreInterval);
-          }
-          return updatedText;
-        });
-      }, 70);
-    }
-
-    return () => {
-      if (interval) clearInterval(interval);
-      if (resetTimeout) clearTimeout(resetTimeout);
-      if (speedIncreaseInterval) clearTimeout(speedIncreaseInterval);
+    const handleMouseEnter = () => {
+        const timeout = window.setTimeout(() => {
+            setIsHovered(true);
+            setShouldReset(false);
+            setSpeed(70);
+            setSymbols([
+                "@",
+                "#",
+                "%",
+                "&",
+                "$",
+                "*",
+                "!",
+                "?",
+                "(",
+                ")",
+                "=",
+                "+",
+                "A",
+                "B",
+                "X",
+                ".",
+            ]);
+        }, 300);
+        setHoverTimeout(timeout);
     };
-  });
 
-  return (
-    <Nav>
-      <NavContainer>
-        <NavLogo
-          to="home"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          {displayText}
-        </NavLogo>
-        <MobileIcon onClick={toggle}>
-          <FaBars />
-        </MobileIcon>
-        <NavMenu>
-          <NavItem>
-            <NavLinks to="home" smooth={true} duration={500} offset={-80}>
-              Home
-            </NavLinks>
-          </NavItem>
-          <NavItem>
-            <NavLinks to="about" smooth={true} duration={500} offset={-80}>
-              About
-            </NavLinks>
-          </NavItem>
-          <NavItem>
-            <NavLinks
-              to="publications"
-              smooth={true}
-              duration={500}
-              offset={-80}
-            >
-              Publications
-            </NavLinks>
-        </NavMenu>
-        <NavBtn>
-          <NavBtnLink
-            to="https://github.com/AbiXnash"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithub />
-            <span className="github-text">GitHub</span>
-          </NavBtnLink>
-        </NavBtn>
-      </NavContainer>
-    </Nav>
-  );
+    const handleMouseLeave = () => {
+        if (hoverTimeout) {
+            clearTimeout(hoverTimeout);
+            setHoverTimeout(undefined);
+        }
+        setIsHovered(false);
+        setShouldReset(true);
+    };
+
+    useEffect(() => {
+        let interval: number | undefined;
+        let resetTimeout: number | undefined;
+        let speedIncreaseInterval: number | undefined;
+
+        if (isHovered) {
+            interval = window.setInterval(() => {
+                setDisplayText(() => {
+                    let randomText = "";
+                    for (let i = 0; i < originalText.length; i++) {
+                        randomText += shouldReset ? originalText[i] : getRandomSymbol();
+                    }
+                    return randomText;
+                });
+            }, speed);
+
+            resetTimeout = window.setTimeout(() => {
+                setShouldReset(true);
+                setIsHovered(false);
+            }, 1000);
+
+            speedIncreaseInterval = window.setTimeout(() => {
+                const speedInterval = window.setInterval(() => {
+                    setSpeed((prevSpeed) => prevSpeed - 1);
+                    setSymbols((prevSymbols) => {
+                        const newSymbols = prevSymbols.slice(0, -1);
+                        if (
+                            ["A", "B", "X", "."].some((char) => !newSymbols.includes(char))
+                        ) {
+                            return prevSymbols;
+                        }
+                        return newSymbols;
+                    });
+                }, 70);
+                return () => clearInterval(speedInterval);
+            }, 1000);
+
+            window.setTimeout(() => {
+                setDisplayText(originalText);
+                setShouldReset(false);
+                setIsHovered(false);
+            }, 1000);
+        } else if (shouldReset) {
+            const restoreInterval = window.setInterval(() => {
+                setDisplayText((prevText) => {
+                    let updatedText = "";
+                    for (let i = 0; i < originalText.length; i++) {
+                        updatedText +=
+                            prevText[i] === originalText[i]
+                                ? originalText[i]
+                                : getRandomSymbol();
+                    }
+                    if (updatedText === originalText) {
+                        clearInterval(restoreInterval);
+                    }
+                    return updatedText;
+                });
+            }, 70);
+        }
+
+        return () => {
+            if (interval) clearInterval(interval);
+            if (resetTimeout) clearTimeout(resetTimeout);
+            if (speedIncreaseInterval) clearTimeout(speedIncreaseInterval);
+        };
+    });
+
+    return (
+        <Nav>
+            <NavContainer>
+                <NavLogo
+                    to="home"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    {displayText}
+                </NavLogo>
+                <MobileIcon onClick={toggle}>
+                    <FaBars />
+                </MobileIcon>
+                <NavMenu>
+                    <NavItem>
+                        <NavLinks to="home" smooth={true} duration={500} offset={-80}>
+                            Home
+                        </NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks to="about" smooth={true} duration={500} offset={-80}>
+                            About
+                        </NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks
+                            to="publications"
+                            smooth={true}
+                            duration={500}
+                            offset={-80}
+                        >
+                            Publications
+                        </NavLinks>
+                    </NavItem>
+                </NavMenu>
+                <NavBtn>
+                    <NavBtnLink
+                        to="https://github.com/AbiXnash"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <FaGithub />
+                        <span className="github-text">GitHub</span>
+                    </NavBtnLink>
+                </NavBtn>
+            </NavContainer>
+        </Nav>
+    );
 };
 
 export default Navbar;
