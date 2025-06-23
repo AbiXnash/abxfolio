@@ -1,105 +1,114 @@
 .profile-view {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
 
-	img {
-		margin: 0 0 10% 0%;
-		width: 90%;
-		box-shadow: .1px .4px 0 .4px var(--dark-font-clr);
-		border-radius: 50%;
-		animation: float 5s ease-in-out infinite;
-	}
+  img {
+    margin: 0 0 10% 0%;
+    width: 90%;
+    box-shadow: .1px .4px 0 .4px var(--dark-font-clr);
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite;
+  }
 }
 
 @keyframes float {
-	0% {
-		transform: translateY(0);
-	}
-	50% {
-		transform: translateY(-5px);
-	}
-	100% {
-		transform: translateY(0);
-	}
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .introduction {
-	display: flex;
-	flex-direction: column;
-	justify-content: left;
-	width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 60%;
 }
 
 .hello-world {
-	margin: 0;
-	font-weight: 700;
+  margin: 0;
+  font-weight: 700;
 }
 
 .welcome-text {
-	display: inline-flex;
-	flex-direction: row;
-	text-align: left;
+  display: inline-flex;
+  flex-direction: row;
+  text-align: left;
 
-	@media screen and (max-width: 860px) {
-		flex-direction: column;
-	}
+  @media screen and (max-width: 860px) {
+    flex-direction: column;
+  }
 }
 
 .name {
-	margin: 0;
-	color: var(--dark-grey-font-clr);
-	font-weight: 600;
+  margin: 0;
+  color: var(--dark-grey-font-clr);
+  font-weight: 600;
 }
 
 .caret {
-	display: inline-block;
-	width: 5px;
-	height: 1em;
-	background-color: #333;
-	animation: blink 1.5s steps(2, start) infinite;
+  display: inline-block;
+  width: 5px;
+  height: 1em;
+  background-color: #333;
+  animation: blink 1.5s steps(2, start) infinite;
 }
 
 @keyframes blink {
-	to {
-		visibility: hidden;
-	}
+  to {
+    visibility: hidden;
+  }
 }
 
-.skill1, .skill2, .skill3 {
-	box-shadow: inset 0 0 0 2px var(--dark-font-clr);
-	color: var(--light-font-clr);
-	display: inline-block;
-	border-radius: 50px;
-	padding: 5px 15px;
-	margin: 5px;
+.skill1,
+.skill2,
+.skill3,
+.skill4 {
+  box-shadow: inset 0 0 0 2px var(--dark-font-clr);
+  color: var(--light-font-clr);
+  display: inline-block;
+  border-radius: 50px;
+  padding: 5px 15px;
+  margin: 5px;
 
-	&.skill1 {
-		background-color: var(--span-green-clr);
-	}
+  &.skill1 {
+    background-color: var(--span-red-clr);
+  }
 
-	&.skill2 {
-		background-color: var(--span-blue-clr);
-	}
+  &.skill2 {
+    background-color: var(--span-green-clr);
+  }
 
-	&.skill3 {
-		background-color: var(--span-red-clr);
-	}
+  &.skill3 {
+    background-color: var(--span-blue-clr);
+  }
+
+  &.skill4 {
+    background-color: var(--span-mod-blue-clr);
+  }
 }
 
 @media screen and (max-width: 960px) {
-	.profile-view {
-		width: 100%;
+  .profile-view {
+    width: 100%;
 
-		img {
-			margin: 20px 0 20px 0px;
-			width: 50%;
-		}
-	}
+    img {
+      margin: 20px 0 20px 0px;
+      width: 50%;
+    }
+  }
 
-	.introduction {
-		width: 100%;
-	}
+  .introduction {
+    width: 100%;
+  }
 }
