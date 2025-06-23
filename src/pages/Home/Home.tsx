@@ -15,14 +15,15 @@ const Home = () => {
                     Welcome to abxfolio,&nbsp;<span className='name'> I'm Abinash<span className='caret'></span></span>
                 </p>
                 <p>
-                    [ Description: I'm a Full Stack Developer, Deep Learning Enthusiast
-                    and I'm here to help you with your next project. ]
+                    [ Description: Full Stack Developer
+                    <span> <a href='https://www.mindgate.solutions/' className='at-company'>@Mindgate</a> </span> — crafting clean code, scalable systems, and intelligent solutions for the real world.
+                    I'm here to help you with your next project. ]
                 </p>
                 <p>
                     <span className='skill1'> Java </span>
                     <span className='skill2'> Spring Boot </span>
                     <span className='skill3'> Golang </span>
-                    <span className='skill4'> Postgres </span>
+                    <span className='skill4'> PostgreSQL </span>
                 </p>
             </div>
         </div>
