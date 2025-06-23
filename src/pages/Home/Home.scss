@@ -58,10 +58,10 @@
 
 .caret {
   display: inline-block;
-  width: 5px;
+  width: 12px;
   height: 1em;
   background-color: #333;
-  animation: blink 1.5s steps(2, start) infinite;
+  animation: blink 1.8s steps(2, start) infinite;
 }
 
 @keyframes blink {
