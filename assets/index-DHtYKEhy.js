@@ -109,7 +109,7 @@ Please change the parent <Route path="${_}"> to <Route path="${_==="/"?"*":`${_}
     display: none;
   }
 `,xu=Je.li`
-  font-size: 1rem;
+  font-size: 1.2rem;
   height: 80px;
 `,_u=Je(op.Link)`
   color: var(--dark-font-clr);
