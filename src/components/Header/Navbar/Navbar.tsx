@@ -74,7 +74,7 @@ const NavMenu = styled.ul`
 `;
 
 const NavItem = styled.li`
-  font-size: 1rem;
+  font-size: 1.2rem;
   height: 80px;
 `;
 
