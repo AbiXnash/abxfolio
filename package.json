@@ -15,5 +15,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "scss": "^0.2.4"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.89.2"
   }
 }

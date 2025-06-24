@@ -35,6 +35,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:19.1.0"],\
           ["root-workspace-0b6124", "workspace:."],\
+          ["sass-embedded", "npm:1.89.2"],\
           ["scss", "npm:0.2.4"]\
         ],\
         "linkType": "SOFT"\
@@ -401,6 +402,15 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-string-parser", "npm:7.27.1"],\
           ["@babel/helper-validator-identifier", "npm:7.27.1"],\
           ["@babel/types", "npm:7.27.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@bufbuild/protobuf", [\
+      ["npm:2.5.2", {\
+        "packageLocation": "../../.yarn/berry/cache/@bufbuild-protobuf-npm-2.5.2-df6f6b0702-10c0.zip/node_modules/@bufbuild/protobuf/",\
+        "packageDependencies": [\
+          ["@bufbuild/protobuf", "npm:2.5.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1740,6 +1750,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["buffer-builder", [\
+      ["npm:0.2.0", {\
+        "packageLocation": "../../.yarn/berry/cache/buffer-builder-npm-0.2.0-14ffbed838-10c0.zip/node_modules/buffer-builder/",\
+        "packageDependencies": [\
+          ["buffer-builder", "npm:0.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["cacache", [\
       ["npm:19.0.1", {\
         "packageLocation": "../../.yarn/berry/cache/cacache-npm-19.0.1-395cba1936-10c0.zip/node_modules/cacache/",\
@@ -1916,6 +1935,15 @@ const RAW_RUNTIME_STATE =
           ["color-name", "npm:1.1.4"],\
           ["color-string", "npm:1.9.1"],\
           ["simple-swizzle", "npm:0.2.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["colorjs.io", [\
+      ["npm:0.5.2", {\
+        "packageLocation": "../../.yarn/berry/cache/colorjs.io-npm-0.5.2-4966f6c0a3-10c0.zip/node_modules/colorjs.io/",\
+        "packageDependencies": [\
+          ["colorjs.io", "npm:0.5.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2521,6 +2549,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["has-flag", [\
+      ["npm:4.0.0", {\
+        "packageLocation": "../../.yarn/berry/cache/has-flag-npm-4.0.0-32af9f0536-10c0.zip/node_modules/has-flag/",\
+        "packageDependencies": [\
+          ["has-flag", "npm:4.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["hast-util-from-html", [\
       ["npm:2.0.3", {\
         "packageLocation": "../../.yarn/berry/cache/hast-util-from-html-npm-2.0.3-4f566b13b5-10c0.zip/node_modules/hast-util-from-html/",\
@@ -2723,6 +2760,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["iconv-lite", "npm:0.6.3"],\
           ["safer-buffer", "npm:2.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["immutable", [\
+      ["npm:5.1.3", {\
+        "packageLocation": "../../.yarn/berry/cache/immutable-npm-5.1.3-27d8e1c55d-10c0.zip/node_modules/immutable/",\
+        "packageDependencies": [\
+          ["immutable", "npm:5.1.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4353,9 +4399,20 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:19.1.0"],\
           ["root-workspace-0b6124", "workspace:."],\
+          ["sass-embedded", "npm:1.89.2"],\
           ["scss", "npm:0.2.4"]\
         ],\
         "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["rxjs", [\
+      ["npm:7.8.2", {\
+        "packageLocation": "../../.yarn/berry/cache/rxjs-npm-7.8.2-80ecda9013-10c0.zip/node_modules/rxjs/",\
+        "packageDependencies": [\
+          ["rxjs", "npm:7.8.2"],\
+          ["tslib", "npm:2.8.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["safer-buffer", [\
@@ -4363,6 +4420,183 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/safer-buffer-npm-2.1.2-8d5c0b705e-10c0.zip/node_modules/safer-buffer/",\
         "packageDependencies": [\
           ["safer-buffer", "npm:2.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "../../.yarn/berry/cache/sass-embedded-npm-1.89.2-8aa9e3c729-10c0.zip/node_modules/sass-embedded/",\
+        "packageDependencies": [\
+          ["@bufbuild/protobuf", "npm:2.5.2"],\
+          ["buffer-builder", "npm:0.2.0"],\
+          ["colorjs.io", "npm:0.5.2"],\
+          ["immutable", "npm:5.1.3"],\
+          ["rxjs", "npm:7.8.2"],\
+          ["sass-embedded", "npm:1.89.2"],\
+          ["sass-embedded-android-arm", "npm:1.89.2"],\
+          ["sass-embedded-android-arm64", "npm:1.89.2"],\
+          ["sass-embedded-android-riscv64", "npm:1.89.2"],\
+          ["sass-embedded-android-x64", "npm:1.89.2"],\
+          ["sass-embedded-darwin-arm64", "npm:1.89.2"],\
+          ["sass-embedded-darwin-x64", "npm:1.89.2"],\
+          ["sass-embedded-linux-arm", "npm:1.89.2"],\
+          ["sass-embedded-linux-arm64", "npm:1.89.2"],\
+          ["sass-embedded-linux-musl-arm", "npm:1.89.2"],\
+          ["sass-embedded-linux-musl-arm64", "npm:1.89.2"],\
+          ["sass-embedded-linux-musl-riscv64", "npm:1.89.2"],\
+          ["sass-embedded-linux-musl-x64", "npm:1.89.2"],\
+          ["sass-embedded-linux-riscv64", "npm:1.89.2"],\
+          ["sass-embedded-linux-x64", "npm:1.89.2"],\
+          ["sass-embedded-win32-arm64", "npm:1.89.2"],\
+          ["sass-embedded-win32-x64", "npm:1.89.2"],\
+          ["supports-color", "npm:8.1.1"],\
+          ["sync-child-process", "npm:1.0.2"],\
+          ["varint", "npm:6.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-android-arm", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-android-arm-npm-1.89.2-5efec482fe/node_modules/sass-embedded-android-arm/",\
+        "packageDependencies": [\
+          ["sass-embedded-android-arm", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-android-arm64", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-android-arm64-npm-1.89.2-7a232c335c/node_modules/sass-embedded-android-arm64/",\
+        "packageDependencies": [\
+          ["sass-embedded-android-arm64", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-android-riscv64", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-android-riscv64-npm-1.89.2-76eba67c80/node_modules/sass-embedded-android-riscv64/",\
+        "packageDependencies": [\
+          ["sass-embedded-android-riscv64", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-android-x64", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-android-x64-npm-1.89.2-63582f1e45/node_modules/sass-embedded-android-x64/",\
+        "packageDependencies": [\
+          ["sass-embedded-android-x64", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-darwin-arm64", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-darwin-arm64-npm-1.89.2-0dae730600/node_modules/sass-embedded-darwin-arm64/",\
+        "packageDependencies": [\
+          ["sass-embedded-darwin-arm64", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-darwin-x64", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-darwin-x64-npm-1.89.2-e441c0eef3/node_modules/sass-embedded-darwin-x64/",\
+        "packageDependencies": [\
+          ["sass-embedded-darwin-x64", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-linux-arm", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-linux-arm-npm-1.89.2-9b5cb939f6/node_modules/sass-embedded-linux-arm/",\
+        "packageDependencies": [\
+          ["sass-embedded-linux-arm", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-linux-arm64", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-linux-arm64-npm-1.89.2-0569b3efe9/node_modules/sass-embedded-linux-arm64/",\
+        "packageDependencies": [\
+          ["sass-embedded-linux-arm64", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-linux-musl-arm", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-linux-musl-arm-npm-1.89.2-1d0dc16529/node_modules/sass-embedded-linux-musl-arm/",\
+        "packageDependencies": [\
+          ["sass-embedded-linux-musl-arm", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-linux-musl-arm64", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-linux-musl-arm64-npm-1.89.2-77cc8860e5/node_modules/sass-embedded-linux-musl-arm64/",\
+        "packageDependencies": [\
+          ["sass-embedded-linux-musl-arm64", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-linux-musl-riscv64", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-linux-musl-riscv64-npm-1.89.2-acf65511ed/node_modules/sass-embedded-linux-musl-riscv64/",\
+        "packageDependencies": [\
+          ["sass-embedded-linux-musl-riscv64", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-linux-musl-x64", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-linux-musl-x64-npm-1.89.2-fb46fa8a1f/node_modules/sass-embedded-linux-musl-x64/",\
+        "packageDependencies": [\
+          ["sass-embedded-linux-musl-x64", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-linux-riscv64", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-linux-riscv64-npm-1.89.2-94136383cc/node_modules/sass-embedded-linux-riscv64/",\
+        "packageDependencies": [\
+          ["sass-embedded-linux-riscv64", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-linux-x64", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-linux-x64-npm-1.89.2-d11aa7f001/node_modules/sass-embedded-linux-x64/",\
+        "packageDependencies": [\
+          ["sass-embedded-linux-x64", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-win32-arm64", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-win32-arm64-npm-1.89.2-1cba3952e4/node_modules/sass-embedded-win32-arm64/",\
+        "packageDependencies": [\
+          ["sass-embedded-win32-arm64", "npm:1.89.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass-embedded-win32-x64", [\
+      ["npm:1.89.2", {\
+        "packageLocation": "./.yarn/unplugged/sass-embedded-win32-x64-npm-1.89.2-60b5b7ed17/node_modules/sass-embedded-win32-x64/",\
+        "packageDependencies": [\
+          ["sass-embedded-win32-x64", "npm:1.89.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4632,6 +4866,35 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["ansi-regex", "npm:6.1.0"],\
           ["strip-ansi", "npm:7.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["supports-color", [\
+      ["npm:8.1.1", {\
+        "packageLocation": "../../.yarn/berry/cache/supports-color-npm-8.1.1-289e937149-10c0.zip/node_modules/supports-color/",\
+        "packageDependencies": [\
+          ["has-flag", "npm:4.0.0"],\
+          ["supports-color", "npm:8.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sync-child-process", [\
+      ["npm:1.0.2", {\
+        "packageLocation": "../../.yarn/berry/cache/sync-child-process-npm-1.0.2-67949d5060-10c0.zip/node_modules/sync-child-process/",\
+        "packageDependencies": [\
+          ["sync-child-process", "npm:1.0.2"],\
+          ["sync-message-port", "npm:1.1.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sync-message-port", [\
+      ["npm:1.1.3", {\
+        "packageLocation": "../../.yarn/berry/cache/sync-message-port-npm-1.1.3-1494f3d135-10c0.zip/node_modules/sync-message-port/",\
+        "packageDependencies": [\
+          ["sync-message-port", "npm:1.1.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5067,6 +5330,15 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@types/browserslist",\
           "browserslist"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["varint", [\
+      ["npm:6.0.0", {\
+        "packageLocation": "../../.yarn/berry/cache/varint-npm-6.0.0-a638e8f225-10c0.zip/node_modules/varint/",\
+        "packageDependencies": [\
+          ["varint", "npm:6.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
