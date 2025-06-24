@@ -2,14 +2,20 @@
 import "../styles/Loader.scss";
 ---
 
-<!-- Loader -->
 <div class="loader-container" id="loader">
   <div class="loader"></div>
 </div>
 
-<script type="module">
-  setTimeout(() => {
-    document.getElementById("loader")?.remove();
-    document.getElementById("content")?.classList.remove("hidden");
-  }, 1500);
+<script is:inline>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    const content = document.getElementById("content");
+
+    if (loader) {
+      setTimeout(() => {
+        loader.remove();
+        content?.classList.remove("hidden");
+      }, 1500);
+    }
+  });
 </script>
