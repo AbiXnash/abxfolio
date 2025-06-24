@@ -2,4 +2,28 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Abxfolio" />
+<BaseLayout title="Abxfolio">
+  <section id="home" class="home">
+    <div class="container column">
+      <div class="profile-view">
+        <img src="./profile.png" alt="Abinash Selvarasu" />
+      </div>
+      <div class="intro">
+        <h1 class="hello-world">Hello World!</h1>
+      </div>
+      <p class="welcome-text">
+        Welcome to abxfolio, &nbsp;
+        <span class="name">I'm Abinash <span class="caret"></span></span>
+      </p>
+      <p class="description">
+        [ Description: Full Stack Developer
+        <span class="company">
+          <a href="https://www.mindgate.solutions/"> @Mindgate</a>
+          - crafting clean code, scalable systems, and intelligent solutions for
+          the real world. I'm here to help you with your next project.
+        </span>
+        ]
+      </p>
+    </div>
+  </section>
+</BaseLayout>
