@@ -1,4 +1,5 @@
 ---
+import "../styles/Home.scss";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
@@ -8,22 +9,30 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="profile-view">
         <img src="./profile.png" alt="Abinash Selvarasu" />
       </div>
-      <div class="intro">
+      <div class="introduction">
         <h1 class="hello-world">Hello World!</h1>
+        <p class="welcome-text">
+          Welcome to abxfolio, &nbsp;
+          <span class="name">I'm Abinash <span class="caret"></span></span>
+        </p>
+        <p class="description">
+          [ Description: Full Stack Developer
+          <span class="company">
+            <a class="at-company" href="https://www.mindgate.solutions/">
+              @Mindgate</a
+            >
+            - crafting clean code, scalable systems, and intelligent solutions for
+            the real world. I'm here to help you with your next project.
+          </span>
+          ]
+        </p>
+        <p class="skills">
+          <span class="skill1">Java</span>
+          <span class="skill2">Spring Boot</span>
+          <span class="skill3"> Golang</span>
+          <span class="skill4"> PostgreSQL</span>
+        </p>
       </div>
-      <p class="welcome-text">
-        Welcome to abxfolio, &nbsp;
-        <span class="name">I'm Abinash <span class="caret"></span></span>
-      </p>
-      <p class="description">
-        [ Description: Full Stack Developer
-        <span class="company">
-          <a href="https://www.mindgate.solutions/"> @Mindgate</a>
-          - crafting clean code, scalable systems, and intelligent solutions for
-          the real world. I'm here to help you with your next project.
-        </span>
-        ]
-      </p>
     </div>
   </section>
 </BaseLayout>
