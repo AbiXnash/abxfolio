@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+	<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="none" stroke-linecap="none" stroke-linejoin="none" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+		<g transform="scale(5.33333,5.33333)">
+			<path d="M26.178,11.935l-16.393,27.958c-0.81,1.381 0.202,3.107 1.821,3.107h32.787c1.619,0 2.631,-1.726 1.822,-3.107l-16.393,-27.958c-0.81,-1.382 -2.834,-1.382 -3.644,0z" fill="#3cc8eb" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"></path>
+			<path d="M28.737,13l-2.915,-5.049c-0.81,-1.403 -2.834,-1.403 -3.644,0l-10.425,18.056" fill="none" stroke="#18193f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+			<path d="M8.216,32.134l-2.431,4.211c-0.81,1.402 0.202,3.155 1.821,3.155h32.787c1.619,0 2.631,-1.753 1.822,-3.155l-10.513,-18.209" fill="none" stroke="#18193f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+		</g>
+	</g>
+</svg>
