@@ -6,3 +6,10 @@ import "../styles/Loader.scss";
 <div class="looder-container">
   <div class="loader"></div>
 </div>
+
+<script type="module">
+  setTimeout(() => {
+    document.getElementById("loader")?.remove();
+    document.getElementById("content")?.classList.remove("hidden");
+  }, 1500);
+</script>
