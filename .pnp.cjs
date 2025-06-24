@@ -34,7 +34,8 @@ const RAW_RUNTIME_STATE =
           ["astro", "npm:5.10.1"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:19.1.0"],\
-          ["root-workspace-0b6124", "workspace:."]\
+          ["root-workspace-0b6124", "workspace:."],\
+          ["scss", "npm:0.2.4"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -3805,6 +3806,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["ometa", [\
+      ["npm:0.2.2", {\
+        "packageLocation": "./.yarn/unplugged/ometa-npm-0.2.2-a91ea6ee26/node_modules/ometa/",\
+        "packageDependencies": [\
+          ["ometa", "npm:0.2.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["oniguruma-parser", [\
       ["npm:0.12.1", {\
         "packageLocation": "../../.yarn/berry/cache/oniguruma-parser-npm-0.12.1-13f43ada2f-10c0.zip/node_modules/oniguruma-parser/",\
@@ -4342,7 +4352,8 @@ const RAW_RUNTIME_STATE =
           ["astro", "npm:5.10.1"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:19.1.0"],\
-          ["root-workspace-0b6124", "workspace:."]\
+          ["root-workspace-0b6124", "workspace:."],\
+          ["scss", "npm:0.2.4"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -4361,6 +4372,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/scheduler-npm-0.26.0-980301a213-10c0.zip/node_modules/scheduler/",\
         "packageDependencies": [\
           ["scheduler", "npm:0.26.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["scss", [\
+      ["npm:0.2.4", {\
+        "packageLocation": "../../.yarn/berry/cache/scss-npm-0.2.4-97993b1bc4-10c0.zip/node_modules/scss/",\
+        "packageDependencies": [\
+          ["ometa", "npm:0.2.2"],\
+          ["scss", "npm:0.2.4"]\
         ],\
         "linkType": "HARD"\
       }]\

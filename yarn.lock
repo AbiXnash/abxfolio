@@ -3291,6 +3291,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ometa@npm:0.2.2":
+  version: 0.2.2
+  resolution: "ometa@npm:0.2.2"
+  checksum: 10c0/6d834b01cf92e5020c63d9a2c2cbfa131b7e03c1ce78cbac42263e93a57dd33d3d8f10c96d8bce4721513f1d09e147891ac33951da6ea1c77d14cca3eb652283
+  languageName: node
+  linkType: hard
+
 "oniguruma-parser@npm:^0.12.1":
   version: 0.12.1
   resolution: "oniguruma-parser@npm:0.12.1"
@@ -3798,6 +3805,7 @@ __metadata:
     astro: "npm:^5.10.1"
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
+    scss: "npm:^0.2.4"
   languageName: unknown
   linkType: soft
 
@@ -3812,6 +3820,15 @@ __metadata:
   version: 0.26.0
   resolution: "scheduler@npm:0.26.0"
   checksum: 10c0/5b8d5bfddaae3513410eda54f2268e98a376a429931921a81b5c3a2873aab7ca4d775a8caac5498f8cbc7d0daeab947cf923dbd8e215d61671f9f4e392d34356
+  languageName: node
+  linkType: hard
+
+"scss@npm:^0.2.4":
+  version: 0.2.4
+  resolution: "scss@npm:0.2.4"
+  dependencies:
+    ometa: "npm:0.2.2"
+  checksum: 10c0/41aa26a7d6baaa1b264c3bc6005f865ceb895050ef62563368491db12b63fda7fc73a46dbe129f68255abdc8aab9c6ef83f8a5dfda0f57857e8cf96846e92f3e
   languageName: node
   linkType: hard
 
